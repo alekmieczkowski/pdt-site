@@ -1,0 +1,10 @@
+#folders
+bootstrap/
+config/
+modules/
+storage/
+vendor/
+artisan
+index.php
+.git
+.htaccess

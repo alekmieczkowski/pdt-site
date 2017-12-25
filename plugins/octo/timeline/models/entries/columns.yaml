@@ -1,0 +1,27 @@
+columns:
+    id:
+        label: 'octo.timeline::lang.list.id'
+        type: number
+        searchable: true
+        sortable: true
+        width: 60px
+    title:
+        label: 'octo.timeline::lang.list.title'
+        type: text
+        searchable: true
+        sortable: true
+    date:
+        label: 'octo.timeline::lang.list.date'
+        type: date
+        searchable: true
+        sortable: true
+    time:
+        label: 'octo.timeline::lang.list.time'
+        type: time
+        searchable: true
+        sortable: true
+    public:
+        label: 'octo.timeline::lang.list.public'
+        type: partial
+        path: $/octo/timeline/models/entries/yesno.htm
+        width: 60px

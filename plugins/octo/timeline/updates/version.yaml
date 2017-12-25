@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Current version.'
+    - create_timeline_table.php
+1.0.2:
+    - 'Added a default view component'
+1.0.3:
+    - 'Updated user column default value'
+    - updated_user_column.php
