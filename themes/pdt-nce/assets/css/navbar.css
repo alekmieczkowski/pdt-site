@@ -1,0 +1,122 @@
+
+/*rollover for main logo*/
+
+.header-rollover:hover{
+	background-image:url("{{ 'assets/images/navbar/logo-rollover.png' | theme}}");
+	
+}
+
+
+/*Navbar Default*/
+.navbar-default {
+	max-height: 30px;
+    background:rgba(255, 255, 255, .81);
+    border-color: #007FFF;
+}
+.navbar-brand{
+	padding-bottom: 5px;
+}
+.navbar-default .navbar-brand {
+color: #007FFF;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+color: #007FFF;
+}
+.navbar-default .navbar-text {
+color: #007FFF;
+}
+.navbar-default .navbar-nav > li > a {
+color: #007FFF;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: white;
+background-color: #007FFF;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: #003054;
+background-color: #ffffff;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+color: #003054;
+background-color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+border-color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: #ffffff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+background-color: #007FFF;
+}
+
+.navbar-default .navbar-link {
+color: #007FFF;
+}
+.navbar-default .navbar-link:hover {
+color: #007FFF;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #007FFF;
+		
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #007FFF;
+		
+		
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+	color: #007FFF;
+	}
+
+	/*This sets background for BOTH navigation bar AND dropdown menu in mobile form*/
+	.navbar-default .navbar-collapse,.navbar-default .navbar-form {
+	 	background:rgba(255, 255, 255, 0.81);
+		}
+}
+
+
+/*Affix Plugin*/
+
+/*Affix is used to tell the navbar when to scroll*/
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+  /*This Tag signals when to start scrolling*/
+.affix-anchor{
+}
+  
+  /*This tag signals what to do when the anchor is reached*/
+.affix + .affix-anchor {
+    padding-top: 70px;
+}
+
+
+
+/*********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********/
+
