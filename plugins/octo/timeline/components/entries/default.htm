@@ -1,0 +1,47 @@
+{# Timeline variable #}
+{% set temp_date = '' %}
+
+<div class="container">
+    <div class="page-header">
+        <h2>Timeline <small>Entries</small></h2>
+    </div>
+    {% for entry in entries %}
+        {# Comment:
+            Matching dates in records for sorting in view
+        #}
+        {% set this_date = entry.date|date("Y-m-d") %}
+
+        {# Comment:
+            This groups dates and puts relevant records under date
+        #}
+        {% if this_date != temp_date %}
+            {% set temp_date = this_date %}
+            <center><h3>{{ entry.date|date('F jS, Y') }}</h3></center>
+            <hr />
+        {% endif %}
+
+        {# Comment:
+            Timeline Entry - Time & Title
+        #}
+        <p class="lead">
+            <small><strong>{{ entry.time|date('H:i') }}</strong></small> &nbsp; {{ entry.title }}<br />
+        </p>
+        {# Comment:
+            Timeline Entry - Text
+        #}
+        <p>
+            {{ entry.text|raw }}
+        </p>
+
+        {# Comment:
+            Puts HR for each entry except last
+        #}
+        {% if not loop.last %}<hr />{% endif %}
+
+    {# Comment:
+        If there are no entries yet..
+    #}
+    {% else %}
+        No entries posted yet..
+    {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+name: Entries
+modelClass: Octo\Timeline\Models\Entries
+form: $/octo/timeline/models/entries/fields.yaml
+defaultRedirect: octo/timeline/entries
+create:
+    title: 'octo.timeline::lang.form.create'
+    redirect: 'octo/timeline/entries/update/:id'
+    redirectClose: octo/timeline/entries
+    flashSave: 'octo.timeline::lang.form.saved'
+update:
+    title: 'octo.timeline::lang.form.update'
+    redirect: octo/timeline/entries
+    redirectClose: octo/timeline/entries
+    flashSave: 'octo.timeline::lang.form.saved'
+    flashDelete: 'octo.timeline::lang.form.deleted'
+preview:
+    title: 'octo.timeline::lang.form.preview'

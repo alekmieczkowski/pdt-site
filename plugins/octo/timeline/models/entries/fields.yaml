@@ -1,0 +1,37 @@
+fields:
+    title:
+        label: 'octo.timeline::lang.form.title'
+        span: full
+        placeholder: 'octo.timeline::lang.form.title_placeholder'
+        required: 1
+        type: text
+        commentAbove: 'octo.timeline::lang.form.title_desc'
+    date:
+        label: 'octo.timeline::lang.form.date'
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        required: 1
+        type: datepicker
+    time:
+        label: 'octo.timeline::lang.form.time'
+        oc.commentPosition: ''
+        mode: time
+        span: auto
+        required: 1
+        type: datepicker
+    text:
+        label: 'octo.timeline::lang.form.text'
+        size: large
+        span: full
+        placeholder: 'octo.timeline::lang.form.text_placeholder'
+        required: 1
+        type: richeditor
+        commentAbove: 'octo.timeline::lang.form.text_description'
+    public:
+        label: 'octo.timeline::lang.form.public'
+        span: full
+        default: 1
+        required: 0
+        type: switch
+        comment: 'octo.timeline::lang.form.public_desc'
