@@ -2,5 +2,50 @@ title = "Home"
 url = "/"
 layout = "default"
 ==
+function onStart()
+{
+    $this->addCss('assets/scss/pages/home.scss');
+}
+==
 
-<p>test</p>
+
+<!--Header (Piece 1)-->
+<section class="piece piece-one bottom-slant" style="background: url({{ 'assets/images/home/als-photo.jpg' | theme}})">       
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container-fluid"> 
+        <!--Creates a Container for middle section on section-->
+        <div class="row header-padding">
+            <div class="col-md-6 col-md-offset-3"> 
+                <img class ="img-responsive center-block" src="{{'assets/images/home/logo-blue.png' | theme}}"/>
+            </div>  
+        </div>
+    </div>
+</section>
+<!--/Header (Piece 1)--> 
+
+
+<!--About Us (Piece 2)-->
+<section class=" piece piece-two piece-two-mobile bottom-slant top-slant" style="background-image:url({{ 'assets/images/home/bg-white.png' | theme}});"> 
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container page-width">    
+        <!--First Row, holds the About us line-->
+        <div class="row about-us">
+            <div class="col-md-2 col-md-offset-5 piece-two-mobile">
+                <p><img src="{{ 'assets/images/home/about-us.png' | theme}}"/></p>
+            </div>
+        <div class="col-md-5"></div>
+    </div>
+        
+    <!--Second Row, holds crest and about us information-->
+    <div class="row vertical-div">
+      <div class="col-md-2  hidden-sm hidden-xs"> <img src="{{ 'assets/images/home/pdt-crest.png' | theme}}"/></div> 
+        <div class="col-md-8 col-md-offset-2 col-sm-12">
+            <p class="footer-text" style="color:#999; font-size:18px;"> 
+                <!--About Us Text Here--> 
+                <br />
+                Phi Delta Theta is a nationally recognized social fraternity built upon friendship, sound learning, and moral rectitude. The fraternity was founded by “The Immortal Six” at Miami University on 1848. Phi Delta Theta strives to helping each and every individual meet his full potential as a man. We celebrate the broad spectrum in diversity that the fraternity holds. Instead of molding young men into the ideal figure, we celebrate the uniqueness of each individual to empower every brother to exceed his personal expectations. One man is no man is our slogan and we stand by that no matter what.  By learning from each other’s strengths while helping to improve each other’s weaknesses, each and every member of Phi Delta Theta develops into a greater version of himself that he could on his own. </br>
+            </p>
+        </div>
+    </div>
+</section>
+<!--/About us(Piece 2)--> 

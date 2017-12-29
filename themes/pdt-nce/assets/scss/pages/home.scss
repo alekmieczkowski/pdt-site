@@ -2,3 +2,77 @@
 $primary: #003054;
 $secondary: white;
 $triary: #007FFF;
+
+
+/*Pieces*/
+.piece{
+	
+	z-index:0;
+	position:relative;		
+	height: 600px;
+	overflow:auto;
+	
+		
+	
+}
+
+/*~~~~~~~~Piece One~~~~~~~~*/
+
+.piece-one{ 
+    min-height: 650px;
+    
+background-repeat:no-repeat;
+background-position: center center;
+
+
+
+/*Background effect*/
+background-size:cover;
+background-attachment:fixed;
+
+}
+
+
+/*For Rows*/
+.header-padding{
+	padding-top: 100px;
+}
+
+/*Positioning Header*/
+.banner-custom{
+	padding-top:200px;
+}
+.bottom-pad{
+	padding-bottom:5px;
+}
+
+/*~~~~~~~~Piece Two~~~~~~~~*/
+
+
+.piece-two{
+	min-height: 700px;
+
+	background-repeat:no-repeat;
+    background-position: center center;
+    
+    /*Background effect*/
+    background-size:cover;
+	background-attachment:fixed;
+	
+    color:#fff;
+
+}
+
+@media (max-width: 480px) {
+    .piece-two{
+        min-height: 900px;
+
+        
+
+
+    }
+}
+
+.page-width > .about-us{
+    padding-top:80px;
+}
