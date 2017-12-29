@@ -15,8 +15,13 @@ description = "Default layout"
         <!--CSS-->
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'| theme }}">
         <link type="text/css" href="{{ 'assets/css/bootstrap.css'| theme }}" rel="stylesheet">
-        <link type="text/css" href="{{ 'assets/css/navbar.css'| theme }}" rel="stylesheet">
-        <link type="text/css" href="{{ 'assets/scss/layouts/default.scss'| theme }}" rel="stylesheet">
+        <link type="text/css" href="{{ ['assets/scss/layouts/default.scss'] | theme }}" rel="stylesheet">
+        <link type="text/css" href="{{ ['assets/scss/layouts/navbar.scss'] | theme }}" rel="stylesheet">
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Chivo" rel="stylesheet">
+        
         {% placeholder css %}
         {% styles %}
 

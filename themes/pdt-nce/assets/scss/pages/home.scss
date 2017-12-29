@@ -3,24 +3,22 @@ $primary: #003054;
 $secondary: white;
 $triary: #007FFF;
 
-
 /*Pieces*/
 .piece{
 	
 	z-index:0;
-	position:relative;		
-	height: 600px;
+	position:relative;
 	overflow:auto;
 	
 		
 	
 }
 
-/*~~~~~~~~Piece One~~~~~~~~*/
+/*~~~~~~~~Piece White~~~~~~~~*/
 
-.piece-one{ 
-    min-height: 650px;
-    
+.white{ 
+
+    background-color: $secondary;
 background-repeat:no-repeat;
 background-position: center center;
 
@@ -32,7 +30,37 @@ background-attachment:fixed;
 
 }
 
+/*~~~~~~~~Piece Blue~~~~~~~~*/
 
+
+.blue{
+
+	background-color: $primary;
+	background-repeat:no-repeat;
+    background-position: center center;
+    
+    /*Background effect*/
+    background-size:cover;
+	background-attachment:fixed;
+	
+    color:$secondary;
+
+}
+
+@media (max-width: 480px) {
+    .piece-two{
+        min-height: 900px;
+
+        
+
+
+    }
+}
+/*~~~~~~~~Top Section~~~~~~~~*/
+
+.top{
+	min-height: 650px;
+}
 /*For Rows*/
 .header-padding{
 	padding-top: 100px;
@@ -46,33 +74,59 @@ background-attachment:fixed;
 	padding-bottom:5px;
 }
 
-/*~~~~~~~~Piece Two~~~~~~~~*/
 
+/*~~~~~~~~About~~~~~~~~*/
 
-.piece-two{
+.about{
+	color:$primary;
 	min-height: 700px;
-
-	background-repeat:no-repeat;
-    background-position: center center;
-    
-    /*Background effect*/
-    background-size:cover;
-	background-attachment:fixed;
 	
-    color:#fff;
-
 }
 
-@media (max-width: 480px) {
-    .piece-two{
-        min-height: 900px;
-
-        
-
-
-    }
+.about > h3{
+	color: $secondary!important;
 }
 
 .page-width > .about-us{
     padding-top:80px;
 }
+
+/*~~~~~~~~Pillars~~~~~~~~*/
+.pillars{
+	min-height:600px;
+}
+.pillars > .page-width{
+	width: 100vw;
+}
+
+.pillars-header > .text-center > h1{
+	color: $primary;
+}
+.pillars-header{
+	margin-top:80px;
+}
+
+.pillar-icon{
+	max-height:180px;
+	margin-bottom:20px;
+	border-radius:50%;
+
+}
+.col-xs-6 > .pillar-icon{
+	max-height:200px;
+}
+
+.pillar-text{
+	font-size:18px;
+	font-style:bold;
+	color: $primary;
+	margin-top:20px;
+}
+
+.pillar-name{
+	font-size:30px;
+}
+.pillar-image-border{
+	border: 4px $primary solid;
+}
+

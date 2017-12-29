@@ -2,15 +2,14 @@ title = "Home"
 url = "/"
 layout = "default"
 ==
-function onStart()
-{
-    $this->addCss('assets/scss/pages/home.scss');
-}
-==
+
+{% put styles %}
+    <link type="text/css" href="{{ ['assets/scss/pages/home.scss'] | theme }}" rel="stylesheet"/>
+{% endput %}
 
 
 <!--Header (Piece 1)-->
-<section class="piece piece-one bottom-slant" style="background: url({{ 'assets/images/home/als-photo.jpg' | theme}})">       
+<section class="piece white top bottom-slant">       
     <!--Sets Width of page. This creates the frame in which the content exists-->
     <div class="container-fluid"> 
         <!--Creates a Container for middle section on section-->
@@ -25,13 +24,13 @@ function onStart()
 
 
 <!--About Us (Piece 2)-->
-<section class=" piece piece-two piece-two-mobile bottom-slant top-slant" style="background-image:url({{ 'assets/images/home/bg-white.png' | theme}});"> 
+<section class=" piece blue about piece-two-mobile bottom-slant top-slant"> 
     <!--Sets Width of page. This creates the frame in which the content exists-->
     <div class="container page-width">    
         <!--First Row, holds the About us line-->
         <div class="row about-us">
             <div class="col-md-2 col-md-offset-5 piece-two-mobile">
-                <p><img src="{{ 'assets/images/home/about-us.png' | theme}}"/></p>
+                <h3>ABOUT US</h3>
             </div>
         <div class="col-md-5"></div>
     </div>
@@ -49,3 +48,68 @@ function onStart()
     </div>
 </section>
 <!--/About us(Piece 2)--> 
+
+<!--Three Pillars-->
+<section class="piece white pillars top-slant">
+    <div class="container page-width">
+        <div class="row pillars-header">
+            <div class="col-xs-12 text-center">
+                <h1>OUR VALUES</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 "> 
+                <div class="row">
+                    <!--Friendship-->
+                    <div class="col-xs-12">
+                        <img id="pillar-friendship" 
+                            class="pillar-icon img-responsive center-block" 
+                            src="{{ 'assets/images/home/sound-learning.png' | theme}}" 
+                            onmouseover="this.src='{{ 'assets/images/home/sound-learning-overlay.png' | theme}}'"
+                            onmouseout="this.src='{{ 'assets/images/home/sound-learning.png' | theme}}'"
+                        />
+                    </div>
+                    <!--Sound Learning-->
+                    <div class="col-xs-6">
+                            <img id="pillar-learning" 
+                            class="pillar-icon img-responsive center-block" 
+                            src="{{ 'assets/images/home/sound-learning.png' | theme}}" 
+                            onmouseover="this.src='{{ 'assets/images/home/sound-learning-overlay.png' | theme}}'"
+                            onmouseout="this.src='{{ 'assets/images/home/sound-learning.png' | theme}}'"
+                        />
+                    </div>
+                    <!--Moral Rectitude-->
+                    <div class="col-xs-6">
+                            <img id="pillar-rectitude" 
+                            class="pillar-icon img-responsive center-block" 
+                            src="{{ 'assets/images/home/sound-learning.png' | theme}}" 
+                            onmouseover="this.src='{{ 'assets/images/home/sound-learning-overlay.png' | theme}}'"
+                            onmouseout="this.src='{{ 'assets/images/home/sound-learning.png' | theme}}'"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 col-sm-offset-1">
+                    <p class="pillar-text" id="friendship">
+                            <b class="pillar-name">Friendship</b><br><br>
+                            "One Man is No Man" is a saying that Phi Delta Theta is raised on. The belief is that with out others you are not as great as you are with others. Our 6 Founders are proof of this because with out each other they would not have been able to start this great fraternity that is here today. Together we make our fraternity, and by working with one another we make it the best it possibly could be. Friendship also is shown in our diverse group of brothers, when looking at our backgrounds, we all come from different walks of life that have led us to this one place.
+                    </p>
+
+                    <p class="pillar-text" id="learning">
+                            <b class="pillar-name">Sound Learning</b><br><br>
+                            The first pillars is Scholarship, we as college men strive to make not only the best grades on our campus but the biggest impact. Our brothers are always found in the library working together and supporting one another in the academic careers. Many of our brothers work with academics on a daily basis, such as being a Teacher Assistant or a Mentor for students on academic probation. With in out fraternity you will not find just one or two majors but a wide variety of different skill sets. The majors in our fraternity range from Engineering to Special Education. As well as making good grades, our brothers are involved on campus in many different organization such as Housing and Residence Life, Niner Guides, and SOAR Orientation Counselors.
+                    </p> 
+
+                    <p class="pillar-text" id="rectitude">
+                            <b class="pillar-name">Rectitude</b><br><br>
+                            This pillar is often the most misunderstood of the three, yet one that stands out among the rest. Moral Rectitude is defined as doing of morally correct things, even when no one is looking. This means that we strive to always do the ethical and correct thing no matter the reward or punishment. The brothers of Phi Delta Theta work constantly to make the right decisions and to leave a great impact on society.
+                    </p> 
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% put js %}
+<script src="{{'assets/javascript/home.js'| theme}}"></script>
+{% endput %}

@@ -4,14 +4,13 @@ $secondary: white;
 $triary: #007FFF;
 
 
-h1, h2, h3, h4, h5, h6{
-    color: $primary;
-}
-
 body{
-    color: $triary;
+	font-family: 'Chivo', sans-serif;
+	
 }
-
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Bitter', serif;
+}
 a{
     color: $triary;
 }

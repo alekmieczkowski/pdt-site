@@ -3,3 +3,12 @@ description: 'Phi Delta Theta NC Epsilon Theme'
 author: 'Aleksander Mieczkowski'
 homepage: www.phideltuncc.org
 code: ''
+
+form:
+    fields:
+        # [...]
+
+        color-primary:
+            label: primary color
+            type: colorpicker
+            assetVar: '$primary'
