@@ -2,7 +2,13 @@ title = "Home"
 url = "/"
 layout = "default"
 ==
-
+function onPillarsCall(){
+    $icondata = array("#pillar-friendship"=>  array("{{ 'assets/images/home/sound-learning.png' | theme}}", "{{ 'assets/images/home/sound-learning-overlay.png' | theme}}"));
+    $icondata += array("#pillar-learning"=>  array("{{ 'assets/images/home/sound-learning.png' | theme}}", "{{ 'assets/images/home/sound-learning-overlay.png' | theme}}"));
+    $icondata += array("#pillar-rectitude"=> array("{{ 'assets/images/home/sound-learning.png' | theme}}", "{{ 'assets/images/home/sound-learning-overlay.png' | theme}}"));
+    return $icondata->toJson();
+}
+==
 {% put styles %}
     <link type="text/css" href="{{ ['assets/scss/pages/home.scss'] | theme }}" rel="stylesheet"/>
 {% endput %}
@@ -24,7 +30,7 @@ layout = "default"
 
 
 <!--About Us (Piece 2)-->
-<section class=" piece blue about piece-two-mobile bottom-slant top-slant"> 
+<section class=" piece blue about piece-two-mobile bottom-slant top-slant bottom-slant"> 
     <!--Sets Width of page. This creates the frame in which the content exists-->
     <div class="container page-width">    
         <!--First Row, holds the About us line-->
@@ -50,7 +56,7 @@ layout = "default"
 <!--/About us(Piece 2)--> 
 
 <!--Three Pillars-->
-<section class="piece white pillars top-slant">
+<section class="piece white pillars">
     <div class="container page-width">
         <div class="row pillars-header">
             <div class="col-xs-12 text-center">
@@ -111,5 +117,9 @@ layout = "default"
 
 
 {% put js %}
-<script src="{{'assets/javascript/home.js'| theme}}"></script>
+<script src="{{'assets/vendor/jquery.js'| theme}}"></script>
 {% endput %}
+
+<script>
+
+</script>
