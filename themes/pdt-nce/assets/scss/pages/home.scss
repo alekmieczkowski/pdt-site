@@ -79,16 +79,27 @@ background-attachment:fixed;
 
 .about{
 	color:$primary;
-	min-height: 700px;
+	min-height: 600px;
+	margin-top:200px;
 	
 }
 
+.about-header{
+	font-size:30px;
+	color: $secondary;
+
+}
 .about > h3{
 	color: $secondary!important;
 }
 
 .page-width > .about-us{
     padding-top:80px;
+}
+
+.footer-text{
+	font-size:18px;
+	color: $secondary;
 }
 
 /*~~~~~~~~Pillars~~~~~~~~*/
@@ -132,3 +143,8 @@ background-attachment:fixed;
 	border: 4px $primary solid;
 }
 
+/*~~~~~~~~Rush Events~~~~~~~~*/
+
+.events{
+	min-height:500px;
+}
