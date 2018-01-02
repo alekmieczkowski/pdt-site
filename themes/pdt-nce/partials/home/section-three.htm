@@ -1,10 +1,49 @@
 <!--Three Pillars-->
 
 <style>
-#pillar-friendship{
+.pillar-friendship{
     background-image: url({{ 'assets/images/home/sound-learning.png' | theme}});
+    background-repeat: no-repeat;
+    background-position: center; 
 }
-#pillar-friendship-selected{
+
+.pillar-friendship:hover{
+    background-image: url({{ 'assets/images/home/sound-learning-overlay.png' | theme}});
+}
+
+.pillar-friendship-selected{
+    background-image: url({{ 'assets/images/home/sound-learning-overlay.png' | theme}});
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.pillar-learning{
+    background-image: url({{ 'assets/images/home/sound-learning.png' | theme}});
+
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.pillar-learning:hover{
+    background-image: url({{ 'assets/images/home/sound-learning-overlay.png' | theme}});
+}
+
+.pillar-learning-selected{
+    background-image: url({{ 'assets/images/home/sound-learning-overlay.png' | theme}});
+}
+
+.pillar-rectitude{
+    background-image: url({{ 'assets/images/home/sound-learning.png' | theme}});
+
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.pillar-rectitude:hover{
+    background-image: url({{ 'assets/images/home/sound-learning-overlay.png' | theme}});
+}
+
+.pillar-rectitude-selected{
     background-image: url({{ 'assets/images/home/sound-learning-overlay.png' | theme}});
 }
 
@@ -19,33 +58,17 @@
         <div class="row">
             <div class="col-sm-4 "> 
                 <div class="row">
-                    <!--Friendship-->
-                    <div class="col-xs-12">
-                        <div class="pillar-image" id="pillar-friendship" ></div>
-                        <!--<img id="pillar-friendship" 
-                            class="pillar-icon img-responsive center-block" 
-                            src="{{ 'assets/images/home/sound-learning.png' | theme}}" 
-                            onmouseover="this.src='{{ 'assets/images/home/sound-learning-overlay.png' | theme}}'"
-                            onmouseout="this.src='{{ 'assets/images/home/sound-learning.png' | theme}}'"
-                        />-->
-                    </div>
                     <!--Sound Learning-->
+                    <div class="col-xs-12">
+                            <div id="pillar-learning"  class="pillar-image center-block pillar-learning"  ></div>
+                    </div>
+                    <!--Friendship-->
                     <div class="col-xs-6">
-                            <img id="pillar-learning" 
-                            class="pillar-icon img-responsive center-block" 
-                            src="{{ 'assets/images/home/sound-learning.png' | theme}}" 
-                            onmouseover="this.src='{{ 'assets/images/home/sound-learning-overlay.png' | theme}}'"
-                            onmouseout="this.src='{{ 'assets/images/home/sound-learning.png' | theme}}'"
-                        />
+                        <div id="pillar-friendship" class="pillar-image center-block pillar-friendship"  ></div>
                     </div>
                     <!--Moral Rectitude-->
                     <div class="col-xs-6">
-                            <img id="pillar-rectitude" 
-                            class="pillar-icon img-responsive center-block" 
-                            src="{{ 'assets/images/home/sound-learning.png' | theme}}" 
-                            onmouseover="this.src='{{ 'assets/images/home/sound-learning-overlay.png' | theme}}'"
-                            onmouseout="this.src='{{ 'assets/images/home/sound-learning.png' | theme}}'"
-                        />
+                            <div id="pillar-rectitude"  class="pillar-image center-block pillar-rectitude" ></div>
                     </div>
                 </div>
             </div>
