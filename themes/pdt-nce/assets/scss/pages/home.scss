@@ -106,6 +106,22 @@ background-attachment:fixed;
 .pillars{
 	min-height:600px;
 }
+
+@media (max-width: 1196px) {
+	.pillars{
+		min-height:700px;
+	}
+	.pillar-text{
+		max-width:500px;
+	}
+}
+@media (max-width: 991px) {
+	.pillars{
+		min-height: 900px;
+		width: 100vw;
+	}
+
+}
 .pillars > .page-width{
 	width: 100vw;
 }
@@ -144,9 +160,9 @@ background-attachment:fixed;
 	border: 4px $primary solid;
 }
 .pillar-image{
-	min-height: 120px;
+	min-height: 180px;
     border-radius: 50%;
-    width: 120px;
+    width: 180px;
 }
 /*~~~~~~~~Rush Events~~~~~~~~*/
 
