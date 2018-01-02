@@ -1,7 +1,8 @@
-       
-function getData(){
-    
-}
+$( document ).ready(function() {
+    $("#friendship").fadeOut(1);
+    $("#rectitude").fadeOut(1);
+});
+
 function toggle_pillar(pillar_name){
     $.request('onPillarsCall', {
         success: function(data) {
@@ -24,16 +25,45 @@ function toggle_pillar(pillar_name){
     });
     
     }
+
+function toggle_text(pillar_name){
+    //get text tag
+    var tag = pillar_name.replace('pillar-','');
+    switch(tag){
+        case '#friendship':
+        $("#learning").fadeOut(400);
+        $("#rectitude").fadeOut(400);
+        $("#friendship").fadeIn(700).delay(500);
+        console.log("friendship");
+        break;
+        case '#learning':
+        $("#friendship").fadeOut(400);
+        $("#rectitude").fadeOut(400);
+        $("#learning").fadeIn(700).delay(500);
+        console.log("learning");
+        break;
+        case '#rectitude':
+        $("#learning").fadeOut(400);
+        $("#friendship").fadeOut(400);
+        $("#rectitude").fadeIn(700).delay(500);
+        console.log("rectitude");
+        break;
+
+    }
+}
     
     $('#pillar-friendship').on('click',function(e){
         toggle_pillar("#pillar-friendship");
+        toggle_text('#pillar-friendship');
       });
     
       $('#pillar-learning').on('click',function(e){
         toggle_pillar('#pillar-learning');
+        toggle_text('#pillar-learning');
       });
     
       $('#pillar-rectitude').on('click',function(e){
         toggle_pillar('#pillar-rectitude');
+        toggle_text('#pillar-rectitude');
       });
     
