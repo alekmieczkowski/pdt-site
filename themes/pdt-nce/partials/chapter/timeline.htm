@@ -1,0 +1,55 @@
+[builderList timeline] 
+modelClass = "AlekMieczkowski\Timeline\Models\Timeline" 
+scope = "-" 
+displayColumn = "title" 
+noRecordsMessage = "No records found" 
+detailsPage = "-" 
+detailsUrlParameter = "id" 
+pageNumber = "{{ :page }}" 
+== 
+{% set records = timeline.records%}
+
+<!--Timeline-->
+<section class=" piece blue timeline">
+
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container chapter-width" id="timeline">
+
+        <div class="row">
+
+            <!--Timeline for Desktop, tablet-->
+            <div class="center-block hidden-xs">
+                <ul class="timeline footer-text">
+
+                    <!--Loop through timeline DB-->
+                    {% for key, record in records %}
+
+                    <li {% if (key+1)%2==0 %}class="timeline-inverted" {% else %}{% endif %}>
+                        <!--Induction-->
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="./img/our_chapter/timeline/induction.jpg" alt=""> </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>{{ record.date }}</h4>
+                                <h4 class="subheading ">{{ record.event }}</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted timeline-width" ->{{ record.description | raw}}</p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                    </li>
+
+
+                    {% else %}
+                    <li class="no-data">{{ noRecordsMessage }}</li>
+                    {% endfor %}
+                    
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
