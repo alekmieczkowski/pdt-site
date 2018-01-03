@@ -1,11 +1,10 @@
-#folders
-bootstrap/
-config/
-modules/
-storage/
-vendor/
-artisan
-index.php
-.git
-.htaccess
-.vscode
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!themes/pdt-nce
+!plugins/alekmieczkowski
+# etc...
+
+# ...even if they are in subdirectories
