@@ -64,10 +64,21 @@ $triary: #007FFF;
 }
 
 /*timeline*/
-
-.timeline{
-	min-height:500px;
+.timeline-div{
+    min-height:900px;
+    margin-top:100px;
 }
+
+
+.subheading{
+    color: $secondary;
+}
+.timeline-heading >h3{
+    border-bottom: 2px solid white;
+    padding-bottom:8px;
+    font-size:26px;
+}
+
 
   /*Timeline*/
   .timeline {
@@ -129,10 +140,10 @@ $triary: #007FFF;
     z-index: 100;
     position: absolute;
     left: 50%;
-    border: 7px solid #003054;
+    border: 7px solid $secondary;
     border-radius: 100%;
-    background-color: #003054;
-    box-shadow: 0 0 5px #003054;
+    background-color:  $secondary;
+    box-shadow: 0 0 5px  $secondary;
     width: 200px;
     height: 200px;
     margin-left: -100px;
@@ -170,25 +181,23 @@ $triary: #007FFF;
 
 .timeline .timeline-heading h4 {
 	opacity:.8;
-  margin-top:22px;
-    margin-bottom: 4px;
-    padding:0;
-    color: #003054;
+    margin-bottom:-16px;
+    color:  $secondary;
 }
 
 .timeline .timeline-heading h4.subheading {
 	opacity:1;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
     text-transform: none;
     font-size:18px;
-    color:#003054;
+    color: $secondary;
 }
 
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
     margin-bottom: 0;
-    color:#808080;
+    color:$secondary;
 }
 
 /*Style for even div.line*/
@@ -198,13 +207,13 @@ $triary: #007FFF;
     top: 60px;
     bottom: 0;
     left: 750px;
-    width: 4px;
+    width: 8px;
     height:340px;
-    background-color: #3b5998;
+    background-color:  $secondary;
     -ms-transform: rotate(-50deg); /* IE 9 */
     -webkit-transform: rotate(-50deg); /* Safari */
     transform: rotate(-50deg);
-    box-shadow: 0 0 5px #4582ec;
+    box-shadow: 0 0 5px  $secondary;
 }
 /*Style for odd div.line*/
 .timeline>li:nth-child(even) .line:before  {
@@ -213,12 +222,12 @@ $triary: #007FFF;
     top: 60px;
     bottom: 0;
     left: 440px;
-    width: 4px;
+    width: 8px;
     height:340px;
-    background-color: #3b5998;
+    background-color:  $secondary;
     -ms-transform: rotate(50deg); /* IE 9 */
     -webkit-transform: rotate(50deg); /* Safari */
     transform: rotate(50deg);
-    box-shadow: 0 0 5px #4582ec;
+    box-shadow: 0 0 5px  $secondary;
 }
 

@@ -10,12 +10,12 @@ pageNumber = "{{ :page }}"
 {% set records = timeline.records%}
 
 <!--Timeline-->
-<section class=" piece blue timeline">
+<section class=" piece blue">
 
     <!--Sets Width of page. This creates the frame in which the content exists-->
     <div class="container chapter-width" id="timeline">
 
-        <div class="row">
+        <div class="row timeline-div">
 
             <!--Timeline for Desktop, tablet-->
             <div class="center-block hidden-xs">
@@ -24,17 +24,18 @@ pageNumber = "{{ :page }}"
                     <!--Loop through timeline DB-->
                     {% for key, record in records %}
 
-                    <li {% if (key+1)%2==0 %}class="timeline-inverted" {% else %}{% endif %}>
+                    <li {% if (key+1)%2==0 %}class="timeline-inverted"{% endif %}>
                         <!--Induction-->
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="./img/our_chapter/timeline/induction.jpg" alt=""> </div>
+                            <img class="img-circle img-responsive" src="{{timeline.image}}" alt=""> </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>{{ record.date }}</h4>
-                                <h4 class="subheading ">{{ record.event }}</h4>
+                                <h3><b class="subheading">{{ record.event }}</b></h3>
+                                
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted timeline-width" ->{{ record.description | raw}}</p>
+                                <p class="text-muted timeline-width">{{ record.description | raw}}</p>
                             </div>
                         </div>
                         <div class="line"></div>
@@ -44,12 +45,12 @@ pageNumber = "{{ :page }}"
                     {% else %}
                     <li class="no-data">{{ noRecordsMessage }}</li>
                     {% endfor %}
-                    
+
                 </ul>
             </div>
         </div>
 
 
-
+        
     </div>
 </section>
