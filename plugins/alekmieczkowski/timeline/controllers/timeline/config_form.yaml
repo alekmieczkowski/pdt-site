@@ -1,0 +1,10 @@
+name: Timeline
+form: $/alekmieczkowski/timeline/models/timeline/fields.yaml
+modelClass: AlekMieczkowski\Timeline\Models\Timeline
+defaultRedirect: alekmieczkowski/timeline/timeline
+create:
+    redirect: 'alekmieczkowski/timeline/timeline/update/:id'
+    redirectClose: alekmieczkowski/timeline/timeline
+update:
+    redirect: alekmieczkowski/timeline/timeline
+    redirectClose: alekmieczkowski/timeline/timeline

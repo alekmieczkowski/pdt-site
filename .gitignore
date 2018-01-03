@@ -1,6 +1,7 @@
 # Ignore everything
 *
-
+themes/
+plugins/
 # But not these files...
 !.gitignore
 !themes/pdt-nce

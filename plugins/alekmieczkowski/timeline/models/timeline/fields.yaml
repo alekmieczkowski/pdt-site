@@ -1,0 +1,32 @@
+fields:
+    event:
+        label: 'Event Name'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    date:
+        label: 'Event Date'
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        required: 1
+        type: datepicker
+    description:
+        label: 'Event Description'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        required: 1
+        type: richeditor
+    icon:
+        label: 'Event Icon'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
