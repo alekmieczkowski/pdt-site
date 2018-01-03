@@ -15,6 +15,10 @@ $triary: #007FFF;
     background:$primary;
 	border-bottom: 3px $secondary solid;
 }
+
+.navbar-toggle{
+	padding: 8px 8px;
+}
 .navbar-brand{
 	padding-bottom: 5px;
 }
@@ -36,7 +40,7 @@ background-color: $secondary;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 color: #003054;
-background-color: $primary;
+background-color: $secondary;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 color: #003054;

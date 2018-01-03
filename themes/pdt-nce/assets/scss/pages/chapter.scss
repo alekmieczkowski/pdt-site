@@ -1,0 +1,70 @@
+//site colors
+$primary: #003054;
+$secondary: white;
+$triary: #007FFF;
+
+.chapter-width{
+	max-width: 1400px;
+}
+
+/*Chapter One*/
+.chapter-one{
+	height:50vh;
+	background-attachment:inherit;
+	background-size:cover;
+	background-position:bottom;
+	overflow:hidden;
+
+}
+
+.chapter-one-padding{
+	padding-top:100px;
+}
+
+/*stats section*/
+.stats{
+	min-height:50vh;
+}
+
+.stat-row{
+	margin-top:60px;
+}
+
+.stat-box{
+
+	margin-bottom: 60px;
+	height:140px;
+	min-width:300px;
+	//background-color:blue;
+
+
+}
+
+.stat-num{
+	font-size:80px;
+	font-style:bold;
+	color: $primary;
+
+}
+
+.stat-text{
+	color: $primary;
+	font-size:20px;
+	max-width:200px;
+	text-align:center;
+	margin-top:-30px;
+}
+
+#icon{
+	height:40px;
+	width:40px;
+	margin:auto;
+	margin-top:-30px;
+	bottom:0;
+}
+
+/*timeline*/
+
+.timeline{
+	min-height:500px;
+}

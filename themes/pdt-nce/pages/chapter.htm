@@ -1,0 +1,22 @@
+title = "Our Chapter"
+url = "/chapter"
+layout = "default"
+==
+
+{% put styles %}
+<link type="text/css" href="{{ ['assets/scss/pages/chapter.scss'] | theme }}" rel="stylesheet"/>
+{% endput %}
+
+<!--Top Section-->
+{% partial "chapter/section-one" %}
+<!--Chapter Statistics-->
+{% partial "chapter/section-two" %}
+<!--Timeline-->
+{% partial "chapter/section-three" %}
+
+
+{% put js %}
+<script src="{{'assets/javascript/chapter.js'| theme}}"></script>
+<script src="{{'assets/vendor/jquery.scrollTo.min.js'| theme}}"></script>
+
+{% endput %}

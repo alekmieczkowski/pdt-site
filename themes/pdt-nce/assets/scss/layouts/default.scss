@@ -41,14 +41,10 @@ a{
 	clip-path: polygon(0 0, 100% 17.5%, 100% 100%, 0% 100%);
 }
 
-.slant{
-    margin-top:-160px;
-	
-	-moz-clip-path: polygon(0 0, 100% 17.5%, 100% 100%, 0% 77%);
-	-webkit-clip-path: polygon(0 0, 100% 17.5%, 100% 100%, 0% 77%);
-	clip-path: polygon(0 0, 100% 17.5%, 100% 100%, 0% 77%);
-}
-
+.curve-bottom {
+	border-radius: 0% 0% 150% 150%/0% 0% 40% 40%;
+  }
+  
 @media (max-width:767px){
 	
 	
@@ -70,3 +66,47 @@ a{
 
 
 /*********************************/
+\
+/*Pieces*/
+.piece{
+	
+	z-index:0;
+	position:relative;
+	overflow:auto;
+	
+		
+	
+}
+
+/*~~~~~~~~Piece White~~~~~~~~*/
+
+.white{ 
+
+    background-color: $secondary;
+background-repeat:no-repeat;
+background-position: center center;
+
+
+
+/*Background effect*/
+background-size:cover;
+background-attachment:fixed;
+
+}
+
+/*~~~~~~~~Piece Blue~~~~~~~~*/
+
+
+.blue{
+
+	background-color: $primary;
+	background-repeat:no-repeat;
+    background-position: center center;
+    
+    /*Background effect*/
+    background-size:cover;
+	background-attachment:fixed;
+	
+    color:$secondary;
+
+}
