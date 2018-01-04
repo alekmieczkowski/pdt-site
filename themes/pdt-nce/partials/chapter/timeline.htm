@@ -10,11 +10,16 @@ pageNumber = "{{ :page }}"
 {% set records = timeline.records%}
 
 <!--Timeline-->
-<section class=" piece blue">
+<section class=" piece blue" style="background-image: url({{ 'assets/images/bg/bg-blue.png' | theme}});">
 
     <!--Sets Width of page. This creates the frame in which the content exists-->
     <div class="container chapter-width" id="timeline">
-
+            <div class="row timeline-page-header">
+                <div class="col-md-12 center-block text-center">
+                    <h1 class="timeline-page-header-text"> Our Timeline</h1>
+                </div>
+            
+            </div>
         <div class="row timeline-div">
 
             <!--Timeline for Desktop, tablet-->
@@ -32,7 +37,7 @@ pageNumber = "{{ :page }}"
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>{{ record.date }}</h4>
-                                <h3><b class="subheading">{{ record.total_rows }}{{ record.event }}</b></h3>
+                                <h3><b class="subheading">{{ record.event }}</b></h3>
                                 
                             </div>
                             <div class="timeline-body">
@@ -51,9 +56,32 @@ pageNumber = "{{ :page }}"
 
                 </ul>
             </div>
+            <!--End Desktop/tablet view-->
+
+            <!--Mobile View-->
+            <div class="col-sm-18 hidden-sm hidden-md hidden-lg footer-text">
+                {% for record in records %}
+                <div class="timeline-block center-block">  
+                    <div class="timeline-image center-block" style="max-height:200px; max-width:200px;"> <img class="img-circle img-responsive"  src="{{record.icon.path}}" alt=""></div>
+                    <div class="timeline-panel" style="text-align:center;">
+                        <div class="timeline-heading center-block">
+                            <h4 >{{ record.date }}</h4>
+                            <h4 class="subheading" >{{ record.event }}</h4>
+                        </div>
+                        <div class="timeline-body">
+                        <p class="text-muted center-block" style="max-width:80%">{{ record.description | raw}}</p>
+                        </div>
+                    </div>
+                </div>  
+                {% if loop.last != true%}
+                <div class="line"></div>
+                {% endif %}
+
+                {% else %}
+                <li class="no-data">{{ noRecordsMessage }}</li>
+                {% endfor %}
+            </div>
+            <!--End Mobile View-->
         </div>
-
-
-        
     </div>
 </section>
