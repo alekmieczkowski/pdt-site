@@ -23,22 +23,25 @@ pageNumber = "{{ :page }}"
 
                     <!--Loop through timeline DB-->
                     {% for key, record in records %}
-
                     <li {% if (key+1)%2==0 %}class="timeline-inverted"{% endif %}>
                         <!--Induction-->
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="{{timeline.image}}" alt=""> </div>
+
+                                
+                            <img class="img-circle img-responsive" src="{{record.icon.path}}" alt=""> </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>{{ record.date }}</h4>
-                                <h3><b class="subheading">{{ record.event }}</b></h3>
+                                <h3><b class="subheading">{{ record.total_rows }}{{ record.event }}</b></h3>
                                 
                             </div>
                             <div class="timeline-body">
                                 <p class="text-muted timeline-width">{{ record.description | raw}}</p>
                             </div>
                         </div>
+                        {% if loop.last != true%}
                         <div class="line"></div>
+                        {% endif %}
                     </li>
 
 
