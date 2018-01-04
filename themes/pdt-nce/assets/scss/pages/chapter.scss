@@ -499,3 +499,79 @@ li > .timeline-inverted{
     font-size:30px;
 }
 }
+
+/*Instagram*/
+.instagram-header{
+    height: 100px;
+    background-color: white;
+    color: #003054;
+    padding-top: 25px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.instagram{
+    min-height:600px;
+}
+.row-instagram{
+    margin-top: 60px;
+    margin-bottom:40px;
+}
+.instagram-container{
+  
+    background-color: $secondary;
+    color: $primary;
+    height: 300px;
+    width:262px;
+    margin-bottom:30px;
+}
+
+.instagram-image{
+    height:262px;
+    width:262px;
+    top:0;
+}
+
+.instagram-footer{
+
+    bottom:0;
+    height: 38px;
+    background-color:$secondary;
+}
+
+.instagram-likes{
+    height:38px;
+    width:100px;
+    float:left;
+}
+
+.instagram-like-icon{
+    height: 24px;
+    width: 24px;
+    margin-left: 10px;
+    margin-top: 7px;
+    float: left;
+
+}
+
+.instagram-like-num{
+    font-size: 24px;
+    font-weight: bolder;
+    margin-top: 7px;
+    float: left;
+    padding-left: 10px;
+}
+
+.instagram-goto{
+    height:38px;
+    width:150px;
+    float:right;
+}
+
+.instagram-goto-icon{
+    float:right;
+    margin-right:10px;
+    height:30px;
+    width:30px;
+    margin-top:4px;
+}
