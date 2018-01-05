@@ -32,6 +32,11 @@ $triary: #007FFF;
 }
 
 /*Founders*/
+
+.founder-row{
+
+    margin-top:40px;  
+}
 .founder-header{
     height: 100px;
     background-color: $primary;
@@ -45,4 +50,46 @@ $triary: #007FFF;
 
 .founder-section{
     min-height:400px;
+}
+
+.founder-container{
+    min-height:400px;
+    width:300px;
+    background-color:$secondary;
+    color: $primary;
+    margin-bottom:40px;
+}
+
+.founder-text{
+    bottom: 0;
+    background-color: white;
+    height: 70px;
+    overflow:hidden;
+}
+
+.founder-more{
+    margin-top:10px;
+}
+.founder-name{
+    font-size:22px;
+}
+.founder-img{
+    height:365px;
+    width:300px;
+}
+
+.founder-desc{
+    margin-top:28px;
+}
+.founder-more .show-more{
+    position: absolute;
+    margin-left: -14px;
+    height: 20px;
+}
+
+.rotate {
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
 }
