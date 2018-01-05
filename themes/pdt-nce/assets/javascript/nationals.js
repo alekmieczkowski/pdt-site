@@ -13,7 +13,7 @@ $("div.founder-text").click(function() {
             height : 70
         },800);
     }
-    $("img.show-more").toggleClass("rotate").animate(200);
+    $(this).find("img.show-more").toggleClass("rotate").animate(200);
    
     //$("img.show-more").animate({
     //    rotate : $("img.show-more").rotate(180)
