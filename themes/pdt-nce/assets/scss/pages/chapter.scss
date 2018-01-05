@@ -8,15 +8,24 @@ $triary: #007FFF;
 }
 
 /*Chapter One*/
-.chapter-one{
+    .chapter-one{
 	height:50vh;
-	background-attachment:inherit;
 	background-size:cover;
 	background-position:bottom;
-	overflow:hidden;
+    overflow:hidden;
+    position:relative;
 
 }
 
+
+
+.img-wrapper{
+    position:absolute;
+    bottom:0;
+}
+.skyline{
+    position:relative;
+}
 .chapter-one-padding{
 	padding-top:100px;
 }
