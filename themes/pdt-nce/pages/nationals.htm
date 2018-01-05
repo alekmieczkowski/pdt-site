@@ -1,0 +1,20 @@
+title = "Nationals"
+url = "/nationals"
+layout = "default"
+is_hidden = 0
+==
+{% put styles %}
+<link type="text/css" href="{{ ['assets/scss/pages/nationals.scss'] | theme }}" rel="stylesheet"/>
+{% endput %}
+
+<!--Top Section-->
+{% partial "nationals/header" %}
+<!--History-->
+{% partial "nationals/history" %}
+<!--Founding Fathers-->
+{% partial "nationals/founders" %}
+
+
+{% put js %}
+<script src="{{'assets/javascript/nationals.js'| theme}}"></script>
+{% endput %}
