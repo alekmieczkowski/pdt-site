@@ -2,7 +2,7 @@ plugin:
     name: 'alekmieczkowski.timeline::lang.plugin.name'
     description: 'alekmieczkowski.timeline::lang.plugin.description'
     author: 'Alek Mieczkowski'
-    icon: oc-icon-adjust
+    icon: oc-icon-clock-o
     homepage: ''
 navigation:
     timeline:
