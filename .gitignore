@@ -11,4 +11,5 @@ index.php
 .htaccess
 .vscode
 
-!plugins/alekmieczkowski
+!plugins/alekmieczkowski/timeline
+!plugins/alekmieczkowski/chapterstatistics
