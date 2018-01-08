@@ -1,0 +1,4 @@
+title: Chapter_statistics
+modelClass: AlekMieczkowski\ChapterStatistics\Models\Statistics
+toolbar:
+    buttons: reorder_toolbar

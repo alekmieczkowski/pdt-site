@@ -4,14 +4,109 @@ $secondary: white;
 $triary: #007FFF;
 
 
-h1, h2, h3, h4, h5, h6{
-    color: $primary;
-}
-
 body{
-    color: $triary;
+	font-family: 'Chivo', sans-serif;
+	
 }
-
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Bitter', serif;
+}
 a{
     color: $triary;
+}
+
+/*Page info width*/
+.page-width{
+    max-width:1100px;
+}
+
+
+/*Slants*/
+
+
+.bottom-slant{
+	
+	/**angling top and bottom**/
+	-moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 77%);
+}
+
+/*fill in from bottom slant*/
+.top-slant{
+    margin-top:-160px;
+	
+	-moz-clip-path: polygon(0 0, 100% 17.5%, 100% 100%, 0% 100%);
+	-webkit-clip-path: polygon(0 0, 100% 17.5%, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 17.5%, 100% 100%, 0% 100%);
+}
+
+.curve-bottom {
+	border-radius: 0% 0% 150% 150%/0% 0% 40% 40%;
+  }
+  
+@media (max-width:767px){
+	
+	
+	.bottom-slant{
+	
+	/**angling top and bottom**/
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+	}
+
+/*fill in from bottom slant*/
+.top-slant{
+    margin-top:-160px;
+	
+	-webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+}
+}
+
+
+/*********************************/
+\
+/*Pieces*/
+.piece{
+	
+	z-index:0;
+	position:relative;
+	overflow:auto;
+	
+		
+	
+}
+
+/*~~~~~~~~Piece White~~~~~~~~*/
+
+.white{ 
+
+    background-color: $secondary;
+background-repeat:no-repeat;
+background-position: center center;
+
+
+
+/*Background effect*/
+background-size:cover;
+background-attachment:fixed;
+
+}
+
+/*~~~~~~~~Piece Blue~~~~~~~~*/
+
+
+.blue{
+
+	background-color: $primary;
+	background-repeat:no-repeat;
+    background-position: center center;
+    
+    /*Background effect*/
+    background-size:cover;
+	background-attachment:fixed;
+	
+    color:$secondary;
+
 }

@@ -1,0 +1,26 @@
+fields:
+    name:
+        label: 'Event Name'
+        span: auto
+        required: 1
+        type: text
+        comment: '30 Characters Max'
+    date:
+        label: 'Event Time and Date'
+        oc.commentPosition: ''
+        mode: datetime
+        span: auto
+        required: 1
+        type: datepicker
+    location:
+        label: 'Event Location'
+        span: auto
+        type: text
+        comment: 'Ex: Pickup at Hunt Hall'
+    description:
+        label: 'Event Description'
+        size: small
+        span: auto
+        required: 1
+        type: textarea
+        comment: '560 Characters Max'

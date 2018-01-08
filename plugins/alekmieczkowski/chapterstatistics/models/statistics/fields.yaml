@@ -1,0 +1,37 @@
+fields:
+    brothers:
+        label: 'Brothers in our Chapter'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: number
+    als:
+        label: 'Amount Raised To Fight ALS'
+        span: auto
+        required: 1
+        type: number
+        comment: 'enter in Thousands. Ex: $17000 -> 17'
+    countries:
+        label: 'Home Countries Within our Chapter'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: number
+    true_blue:
+        label: 'True Blue members'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: number
+    awards:
+        label: 'Chapter Awards'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: number
+    pallas:
+        label: 'Knights of Pallas'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: number

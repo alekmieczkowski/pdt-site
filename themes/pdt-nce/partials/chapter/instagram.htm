@@ -1,0 +1,42 @@
+[userFeed]
+user_name = "phideltuncc"
+limit = 12
+cache = 12
+==
+<div class="instagram-header text-center">Chapter Instagram</div>
+
+<section class=" piece blue instagram" style="background-image: url({{ 'assets/images/bg/bg-blue.png' | theme}});"> 
+    
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container chapter-width"> 
+        <div class="row row-instagram">
+
+            <!--Instagram images-->
+            {% for m in userFeed.media %}
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="instagram-container center-block">
+                    <!--Display Image or Video-->
+                    <!-- {% if m.getType() == 'image' %}--><img class="instagram-image" src="{{ m.getLowResImage().url }}">
+                    <!-- {% elseif m.getType() == 'video' %}--><video width="262" height="262" controls><source src="{{ m.getLowResVideo().url }}" type="video/mp4"/></video>
+                   <!--  {% endif %}
+
+                    <!--Footer-->
+                    <div class="instagram-footer">
+                        <!--Likes-->
+                        <div class="instagram-likes">
+                                <img class="instagram-like-icon" src="{{ 'assets/images/chapter/heart.png' | theme}}"/>  
+                                <h3 class="instagram-like-num">{{m.getLikesCount()}}</h3> 
+                        </div>
+                        <!--Go To Image on instagram-->
+                        <div class="instagram-goto">
+                            <a href="{{ m.getLink() }}"><img class="instagram-goto-icon text-center" src="{{'assets/images/chapter/social-instagram-blue.png' |theme}}"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           {% endfor %}
+
+
+        </div>
+    </div>
+</section>

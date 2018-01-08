@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table alekmieczkowski_rushschedule_'
+    - builder_table_create_alekmieczkowski_rushschedule_.php

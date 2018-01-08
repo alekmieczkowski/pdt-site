@@ -2,3 +2,271 @@
 $primary: #003054;
 $secondary: white;
 $triary: #007FFF;
+
+/*Pieces*/
+.piece{
+	
+	z-index:0;
+	position:relative;
+	overflow:auto;
+	
+		
+	
+}
+
+/*~~~~~~~~Piece White~~~~~~~~*/
+
+.white{ 
+
+    background-color: $secondary;
+background-repeat:no-repeat;
+background-position: center center;
+
+
+
+/*Background effect*/
+background-size:cover;
+background-attachment:fixed;
+
+}
+
+/*~~~~~~~~Piece Blue~~~~~~~~*/
+
+
+.blue{
+
+	background-color: $primary;
+	background-repeat:no-repeat;
+    background-position: center center;
+    
+    /*Background effect*/
+    background-size:cover;
+	background-attachment:fixed;
+	
+    color:$secondary;
+
+}
+
+@media (max-width: 480px) {
+    .piece-two{
+        min-height: 900px;
+
+        
+
+
+    }
+}
+/*~~~~~~~~Top Section~~~~~~~~*/
+
+.top{
+	min-height: 650px;
+}
+/*For Rows*/
+.header-padding{
+	padding-top: 100px;
+}
+
+/*Positioning Header*/
+.banner-custom{
+	padding-top:200px;
+}
+.bottom-pad{
+	padding-bottom:5px;
+}
+
+
+/*~~~~~~~~About~~~~~~~~*/
+
+.about{
+	color:$primary;
+	min-height: 600px;
+	margin-top:200px;
+	
+}
+
+.about-header{
+	font-size:30px;
+	color: $secondary;
+
+}
+.about > h3{
+	color: $secondary!important;
+}
+
+.page-width > .about-us{
+    padding-top:80px;
+}
+
+.footer-text{
+	font-size:18px;
+	color: $secondary;
+}
+
+/*~~~~~~~~Pillars~~~~~~~~*/
+.pillars{
+	min-height:600px;
+}
+
+@media (max-width: 1196px) {
+	.pillars{
+		min-height:800px;
+	}
+
+}
+@media (max-width: 991px) {
+	.pillars{
+		min-height: 1000px;
+		width: 100vw;
+	}
+
+}
+.pillars > .page-width{
+	width: 100vw;
+}
+
+.pillars-header > .text-center > h1{
+	color: $primary;
+}
+.pillars-header{
+	margin-top:80px;
+}
+
+.pillar-icon{
+	max-height:120px;
+	margin-bottom:20px;
+	border-radius:50%;
+
+}
+
+
+.col-xs-6 > .pillar-icon{
+	max-height:200px;
+}
+
+.pillar-text{
+	font-size:18px;
+	font-style:bold;
+	color: $primary;
+	margin-top:20px;
+	position:absolute;
+}
+
+.pillar-name{
+	font-size:30px;
+}
+.pillar-image-border{
+	border: 4px $primary solid;
+}
+.pillar-image{
+	min-height: 180px;
+    border-radius: 50%;
+    width: 180px;
+}
+/*~~~~~~~~Rush Events~~~~~~~~*/
+
+
+
+.events{
+	min-height:500px;
+}
+
+
+.rush-row{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.rush-header{
+	margin-bottom:60px;
+}
+.rush-year{
+	margin-top:-8px;
+}
+.rush-graphic{
+	height:600px;
+	border: 4px solid $secondary;
+}
+#rush-item{
+	margin-bottom:6px;
+}
+
+.event-header{
+	margin-bottom:60px;
+}
+//event info height items
+$event_info_height: 50px;
+
+.event-info-div{
+	width:100%;
+	min-height:$event_info_height;
+	position:relative;
+	border-top:2px $secondary solid;
+
+}
+
+.event-arrow{
+
+	min-height:$event_info_height;
+	float:left;
+	width:10%;
+}
+
+.event-arrow-img{
+	height:40px;
+	width:40px;
+}
+.event-name{
+
+	min-height:$event_info_height;
+	float:left;
+	width:80%;
+	font-size:30px;
+	
+}
+
+.event-cal{
+
+	min-height:$event_info_height;
+	float:right;
+	width:10%;
+}
+
+.event-cal-img{
+	height:30px;
+	width:30px;
+	margin-top:6px;
+}
+
+.event-details{
+	width:100%;
+	height:0px;
+	position:relative;
+	overflow:hidden;
+}
+
+.event-date{
+	padding:10px;
+	font-size:18px;
+	opacity:0;
+}
+.event-desc{
+	font-size:14px;
+	padding:10px;
+	opacity:0;
+}
+
+.event-location{
+	padding:10px;
+	font-size:16px;
+	opacity:0;
+}
+
+.dl-button{
+	font-size:30px;
+	background:$secondary;
+	color: $primary;
+	border:4px solid $secondary;
+	border-radius:10px;
+	width:100%;
+	margin-top:40px;
+}

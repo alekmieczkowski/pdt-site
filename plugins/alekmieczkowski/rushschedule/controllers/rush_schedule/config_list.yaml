@@ -1,0 +1,16 @@
+list: $/alekmieczkowski/rushschedule/models/rush/columns.yaml
+modelClass: AlekMieczkowski\RushSchedule\Models\Rush
+title: Rush_schedule
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'alekmieczkowski/rushschedule/rush_schedule/update/:id'
+# Default sorting column
+defaultSort:
+    column: name
+    direction: asc

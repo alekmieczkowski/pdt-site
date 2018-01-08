@@ -1,0 +1,20 @@
+plugin:
+    name: 'alekmieczkowski.rushschedule::lang.plugin.name'
+    description: 'alekmieczkowski.rushschedule::lang.plugin.description'
+    author: 'Alek Mieczkowski'
+    icon: oc-icon-calendar
+    homepage: ''
+navigation:
+    'Rush Schedule':
+        label: 'Rush Schedule'
+        url: alekmieczkowski/rushschedule/rush_schedule
+        icon: icon-calendar-o
+        sideMenu:
+            'Rush Events':
+                label: 'Rush Events'
+                url: alekmieczkowski/rushschedule/rush_schedule
+                icon: icon-sitemap
+            graphic:
+                label: 'Rush Graphic'
+                url: alekmieczkowski/rushschedule/rush_graphic
+                icon: icon-image

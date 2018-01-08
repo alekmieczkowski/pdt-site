@@ -1,0 +1,11 @@
+plugin:
+    name: 'alekmieczkowski.timeline::lang.plugin.name'
+    description: 'alekmieczkowski.timeline::lang.plugin.description'
+    author: 'Alek Mieczkowski'
+    icon: oc-icon-clock-o
+    homepage: ''
+navigation:
+    timeline:
+        label: Timeline
+        url: alekmieczkowski/timeline/timeline
+        icon: icon-clock-o

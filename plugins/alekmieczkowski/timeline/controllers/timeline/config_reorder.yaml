@@ -1,0 +1,4 @@
+title: Timeline
+modelClass: AlekMieczkowski\Timeline\Models\Timeline
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,11 @@
+plugin:
+    name: 'alekmieczkowski.chapterstatistics::lang.plugin.name'
+    description: 'alekmieczkowski.chapterstatistics::lang.plugin.description'
+    author: 'Alek Mieczkowski'
+    icon: oc-icon-area-chart
+    homepage: ''
+navigation:
+    statistics:
+        label: 'Chapter Statistics'
+        url: alekmieczkowski/chapterstatistics/chapter_statistics
+        icon: icon-area-chart

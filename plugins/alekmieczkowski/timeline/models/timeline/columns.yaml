@@ -1,0 +1,10 @@
+columns:
+    event:
+        label: event
+        type: text
+    date:
+        label: date
+        type: text
+    description:
+        label: description
+        type: text

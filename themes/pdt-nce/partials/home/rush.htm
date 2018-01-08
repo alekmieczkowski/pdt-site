@@ -1,0 +1,78 @@
+[builderList rush]
+modelClass = "AlekMieczkowski\RushSchedule\Models\Rush"
+scope = "-"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList graphic]
+modelClass = "AlekMieczkowski\RushSchedule\Models\Rush_graphic"
+scope = "-"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+use alekmieczkowski\rushschedule\Models\rush_graphic;
+
+
+function onStart()
+{
+    $this['model_data'] = Rush_graphic::first();
+}
+==
+{% set records = rush.records%}
+{% set graphics = graphic.records%}
+
+<section class="piece blue events" style="background-image: url({{ 'assets/images/bg/bg-blue.png' | theme}});">
+    <div class="container-fluid">
+        <div class="row rush-row">
+            <!--Header Text-->
+            <div class="col-md-12 text-center rush-header">
+                <h1>Rush Schedule</h1>
+                <h3 class="rush-year">Spring 2017</h3>
+            </div>
+            <!--Rush Graphic-->
+            <div class="col-md-6 ">
+                {% for graphic_link in graphics %}
+                {%if loop.first%}
+                <img  class="rush-graphic center-block hidden-xs hidden-sm" alt="Rush Graphic" src="{{ model_data.schedule.getPath() }}" />
+                {%endif%}
+                {%endfor%}
+            </div>
+
+            <!--Rush Events-->
+            <div  class="col-sm-12 col-md-4">
+                <h2 class=" event-header text-center" >This Semesters Events</h2>
+                {% for record in records %}
+                <div id="rush-item">
+                    <div class="event-info-div">
+                        <div class="event-arrow">
+                                <img class="event-arrow-img center-block" src="{{ 'assets/images/home/arrow-white.png' | theme}}" />
+                        </div>
+                        <div class="event-name">{{record.name}}</div>
+                        <div class="event-cal"><img class="event-cal-img center-block" src="{{ 'assets/images/home/cal-white.png' | theme}}" /> </div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-date">{{record.date}}</div>
+                        <div class="event-desc">{{record.description}}</div>
+                        <div class="event-location"><b>Location: </b>{{record.location}}</div>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="download-button  hidden-m hidden-lg hidden-xl text-center"> <a href="{{ model_data.schedule.getPath() }}"> <input class="dl-button" type="submit" value="Download the Graphic!"></a></div>
+            </div>
+            
+
+            
+        </div>
+    </div>
+</section>
+{% put js %}
+<script src="{{'assets/vendor/jquery.rotate.js'| theme}}"></script>
+<script src="{{'assets/vendor/ics.dep.min.js'| theme}}"></script>
+<script src="{{'assets/vendor/ics.min.js'| theme}}"></script>
+{% endput %}

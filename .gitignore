@@ -2,6 +2,7 @@
 bootstrap/
 config/
 modules/
+plugins/
 storage/
 vendor/
 artisan
@@ -9,3 +10,5 @@ index.php
 .git
 .htaccess
 .vscode
+
+!plugins/alekmieczkowski

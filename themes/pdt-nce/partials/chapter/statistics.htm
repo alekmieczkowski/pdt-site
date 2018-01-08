@@ -1,0 +1,61 @@
+[builderList statistics]
+modelClass = "AlekMieczkowski\ChapterStatistics\Models\Chapter_Statistics"
+scope = "-"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = statistics.records%}
+<!--Header (Chapter 1)-->
+<section class=" piece white stats"> 
+    
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container chapter-width"> 
+      <!--Creates a Container for middle section on section-->
+      {% for record in records %}
+      {% if loop.last == true%}
+      <div class="row stat-row  text-center" >
+        <div class=" col-sm-4 stat-box ">
+            <p class="stat-num">{{ record.brothers}}</p>
+            <p class="stat-text center-block">Brothers in our Chapter</p>
+        </div>
+
+        <div class="col-sm-4  stat-box">
+            <p class="stat-num">{{record.als}}k</p>
+            <p class="stat-text center-block">Raised for the fight against ALS</p>
+        </div>
+
+        <div class=" col-sm-4  stat-box">
+            <p class="stat-num">{{record.countries}}</p>
+            <p class="stat-text center-block">home countries within our chapter</p>
+        </div>
+
+        <div class="  col-sm-4  stat-box">
+            <p class="stat-num">{{record.true_blue}}</p>
+            <p class="stat-text center-block">True Blue members</p>
+        </div>
+
+        <div class=" col-sm-4  stat-box">
+            <p class="stat-num">{{record.awards}}</p>
+            <p class="stat-text center-block">Chapter Awards</p>
+        </div>
+
+        <div class=" col-sm-4  stat-box">
+            <p class="stat-num">{{record.pallas}}</p>
+            <p class="stat-text center-block">Knights of Pallas</p>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+      <!--Continue button-->
+      <div class="row">
+          <div class="col-xs-12">
+              <div id="icon" style="background-image: url({{'assets/images/chapter/next.png'|theme}})"></div>
+          </div>
+      </div>
+
+    </div>
+  </section>
+  <!--/Header (Chapter 1)-->

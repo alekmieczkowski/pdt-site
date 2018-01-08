@@ -2,5 +2,28 @@ title = "Home"
 url = "/"
 layout = "default"
 ==
+function onPillarsCall(){
+    $icondata = array();
+    #$icondata["#pillar-friendship"] = array({{ 'assets/images/home/sound-learning.png' | theme}}, {{ 'assets/images/home/sound-learning-overlay.png' | theme}});
+    #$icondata["#pillar-learning"] = array({{ 'assets/images/home/sound-learning.png' | theme}}, {{ 'assets/images/home/sound-learning-overlay.png' | theme}});
+    #$icondata["#pillar-rectitude"] = array( {{ 'assets/images/home/sound-learning.png' | theme}}, {{ 'assets/images/home/sound-learning-overlay.png' | theme}});
+    return json_encode($icondata);
+}
+==
+{% put styles %}
+    <link type="text/css" href="{{ ['assets/scss/pages/home.scss'] | theme }}" rel="stylesheet"/>
+{% endput %}
 
-<p>test</p>
+<!--Top Section-->
+{% partial "home/header" %}
+<!--About us-->
+{% partial "home/about" %}
+<!--Our Values-->
+{% partial "home/values" %}
+<!--Rush Events-->
+{% partial "home/rush" %}
+
+
+{% put js %}
+<script src="{{'assets/javascript/home.js'| theme}}"></script>
+{% endput %}

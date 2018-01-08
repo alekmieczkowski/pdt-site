@@ -1,0 +1,128 @@
+//site colors
+$primary: #003054;
+$secondary: white;
+$triary: #007FFF;
+/*rollover for main logo*/
+
+.navbar-logo{
+	margin-top: -15px;
+}
+
+
+/*Navbar Default*/
+.navbar-default {
+	max-height: 30px;
+    background:$primary;
+	border-bottom: 3px $secondary solid;
+}
+
+.navbar-toggle{
+	padding: 8px 8px;
+}
+.navbar-brand{
+	padding-bottom: 5px;
+}
+.navbar-default .navbar-brand {
+color: $secondary;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+color: $secondary;
+}
+.navbar-default .navbar-text {
+color: $secondary;
+}
+.navbar-default .navbar-nav > li > a {
+color: $secondary;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: $primary;
+background-color: $secondary;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: #003054;
+background-color: $secondary;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+color: #003054;
+background-color: $primary;
+}
+.navbar-default .navbar-toggle {
+border-color: $primary;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: $primary;
+}
+.navbar-default .navbar-toggle .icon-bar {
+background-color: $secondary;
+}
+
+.navbar-default .navbar-link {
+color: $secondary;
+}
+.navbar-default .navbar-link:hover {
+color: $secondary;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: $secondary;
+		
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: $secondary;
+		
+		
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+	color: $secondary;
+	}
+
+	/*This sets background for BOTH navigation bar AND dropdown menu in mobile form*/
+	.navbar-default .navbar-collapse,.navbar-default .navbar-form {
+	 	background:$primary;
+		}
+}
+
+
+/*Affix Plugin*/
+
+/*Affix is used to tell the navbar when to scroll*/
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+  /*This Tag signals when to start scrolling*/
+.affix-anchor{
+}
+  
+  /*This tag signals what to do when the anchor is reached*/
+.affix + .affix-anchor {
+    padding-top: 70px;
+}
+
+
+
+/*********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********/
+
