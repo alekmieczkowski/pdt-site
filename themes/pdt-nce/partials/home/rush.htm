@@ -17,12 +17,13 @@ pageNumber = "{{ :page }}"
                 <h3 class="rush-year">Spring 2017</h3>
             </div>
             <!--Rush Graphic-->
-            <div class="col-md-6">
-                <img  class="rush-graphic center-block" alt="Rush Graphic" src="{{'assets/images/home/rush-graphic.png' | theme}}" />
+            <div class="col-md-6 ">
+                <img  class="rush-graphic center-block hidden-xs hidden-sm" alt="Rush Graphic" src="{{'assets/images/home/rush-graphic.png' | theme}}" />
             </div>
 
             <!--Rush Events-->
-            <div  class="col-sm-6 col-md-4">
+            <div  class="col-sm-12 col-md-4">
+                <h2 class=" event-header text-center" >This Semesters Events</h2>
                 {% for record in records %}
                 <div id="rush-item">
                     <div class="event-info-div">
@@ -39,6 +40,7 @@ pageNumber = "{{ :page }}"
                     </div>
                 </div>
                 {% endfor %}
+                <div class="download-button  hidden-m hidden-lg hidden-xl text-center"><input class="dl-button" type="submit" value="Download the Graphic!"></div>
             </div>
             
 

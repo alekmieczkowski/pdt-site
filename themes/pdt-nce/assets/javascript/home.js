@@ -70,61 +70,92 @@ function toggle_text(pillar_name){
 
 /*Rush Schedule*/
 
-$("div#rush-item").click(function() {
-        
-    if($(this).find(".event-details").height() == 0){
+/*Open Divider*/
+function openRush(div){
+     //opening div
+     $(div).find(".event-details").animate({
+        height : $(div).find(".event-details")[0].scrollHeight
+    },800);
 
-        //opening div
-        $(this).find(".event-details").animate({
-                height : $(this).find(".event-details")[0].scrollHeight
-            },800);
-        
-        //event date
-        $(this).find(".event-date").delay(400).animate({
-                opacity: 1
-            },200);
-        
-        //event description
-        $(this).find(".event-desc").delay(600).animate({
+    //event date
+    $(div).find(".event-date").delay(400).animate({
             opacity: 1
         },200);
 
-        //event location
-        $(this).find(".event-location").delay(700).animate({
-            opacity: 1
-        },200);
+    //event description
+    $(div).find(".event-desc").delay(600).animate({
+        opacity: 1
+    },200);
 
-        $(this).find("img.event-arrow-img").rotate({ endDeg:90, duration:0.4, persist:true });
-            
-        }
-        //closing div
-        else{
-            $(this).find(".event-details").delay(200).animate({
-                height : 0
-            },800);
+    //event location
+    $(div).find(".event-location").delay(700).animate({
+        opacity: 1
+    },200);
 
-            //event location
-            $(this).find(".event-location").animate({
-                opacity: 0
-            },200);
-            //event description
-            $(this).find(".event-desc").delay(100).animate({
-                opacity: 0
-            },200);
-
-            //event date
-            $(this).find(".event-date").delay(400).animate({
-                opacity: 0
-            },200);
-
-            
-            $(this).find("img.event-arrow-img").rotate({ endDeg:0, duration:0.4, persist:true });
-        }
+    $(div).find("img.event-arrow-img").rotate({ endDeg:90, duration:0.4, persist:true });
         
+
+}
+/*Close Divider*/
+function closeRush(div, closeAll){
+
+    if(closeAll){
+
+        $("img.event-arrow-img").rotate({ endDeg:0, duration:0.4, persist:true });
+
+        $(div).delay(200).animate({
+            height : 0
+        },800);
+    }
+    else{
+        $(div).find("img.event-arrow-img").rotate({ endDeg:0, duration:0.4, persist:true });
+
+        $(div).find(".event-details").delay(200).animate({
+            height : 0
+        },800);
+
+        
+    }
+
+    //event location
+    $(div).find(".event-location").animate({
+        opacity: 0
+    },200);
+    //event description
+    $(div).find(".event-desc").delay(100).animate({
+        opacity: 0
+    },200);
+
+    //event date
+    $(div).find(".event-date").delay(400).animate({
+        opacity: 0
+    },200);
+
     
     
+}
+
+function closeAll(){
+    $($("div#rush-item").find(".event-details")).each(function() {
+        if($(this).height() != 0)
+        closeRush(this, true);
     });
+}
+$("div#rush-item").click(function() {
+    //close other open div
+    closeAll();
 
-    $("div#rush-item .event-cal").click(function(e) {
-        e.stopPropagation();
-   });
+    //if div is already open
+    if($(this).find(".event-details").height() == 0){
+        openRush(this);
+    }
+    //closing div
+     else{
+        closeRush(this);
+    }
+});
+
+/*stop animation if calendar icon is clicked, and send calendar icon*/
+$("div#rush-item .event-cal").click(function(e) {
+    e.stopPropagation();
+});

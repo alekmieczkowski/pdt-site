@@ -177,7 +177,6 @@ background-attachment:fixed;
 }
 
 .rush-header{
-	margin:20px;
 	margin-bottom:60px;
 }
 .rush-year{
@@ -191,6 +190,9 @@ background-attachment:fixed;
 	margin-bottom:6px;
 }
 
+.event-header{
+	margin-bottom:60px;
+}
 //event info height items
 $event_info_height: 50px;
 
@@ -257,4 +259,14 @@ $event_info_height: 50px;
 	padding:10px;
 	font-size:16px;
 	opacity:0;
+}
+
+.dl-button{
+	font-size:30px;
+	background:$secondary;
+	color: $primary;
+	border:4px solid $secondary;
+	border-radius:10px;
+	width:100%;
+	margin-top:40px;
 }
