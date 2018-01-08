@@ -25,4 +25,9 @@ class Rush extends Model
      * @var string The database table used by the model.
      */
     public $table = 'alekmieczkowski_rushschedule_';
+
+    //attach image
+    public $attachOne = [
+        'schedule' => 'System\Models\File'
+    ];
 }

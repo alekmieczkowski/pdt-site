@@ -6,8 +6,27 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
+[builderList graphic]
+modelClass = "AlekMieczkowski\RushSchedule\Models\Rush_graphic"
+scope = "-"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+use alekmieczkowski\rushschedule\Models\rush_graphic;
+
+
+function onStart()
+{
+    $this['model_data'] = Rush_graphic::first();
+}
 ==
 {% set records = rush.records%}
+{% set graphics = graphic.records%}
+
 <section class="piece blue events" style="background-image: url({{ 'assets/images/bg/bg-blue.png' | theme}});">
     <div class="container-fluid">
         <div class="row rush-row">
@@ -18,7 +37,11 @@ pageNumber = "{{ :page }}"
             </div>
             <!--Rush Graphic-->
             <div class="col-md-6 ">
-                <img  class="rush-graphic center-block hidden-xs hidden-sm" alt="Rush Graphic" src="{{'assets/images/home/rush-graphic.png' | theme}}" />
+                {% for graphic_link in graphics %}
+                {%if loop.first%}
+                <img  class="rush-graphic center-block hidden-xs hidden-sm" alt="Rush Graphic" src="{{ model_data.schedule.getPath() }}" />
+                {%endif%}
+                {%endfor%}
             </div>
 
             <!--Rush Events-->
@@ -50,4 +73,6 @@ pageNumber = "{{ :page }}"
 </section>
 {% put js %}
 <script src="{{'assets/vendor/jquery.rotate.js'| theme}}"></script>
+<script src="{{'assets/vendor/ics.dep.min.js'| theme}}"></script>
+<script src="{{'assets/vendor/ics.min.js'| theme}}"></script>
 {% endput %}

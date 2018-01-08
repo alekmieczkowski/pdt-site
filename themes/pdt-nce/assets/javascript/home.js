@@ -155,7 +155,28 @@ $("div#rush-item").click(function() {
     }
 });
 
+
+Date.prototype.addHours = function(h){
+    console.log("clicked");
+    this.setHours(this.getHours()+h);
+    return this;
+}
+
 /*stop animation if calendar icon is clicked, and send calendar icon*/
 $("div#rush-item .event-cal").click(function(e) {
+    var myevent = $(this).parent().parent();
     e.stopPropagation();
+    
+    //create and populate calendar file
+    var cal = ics();
+    var subject = $(myevent).find('.event-name').text();
+    var desc = $(myevent).find('.event-desc').text();
+    var loc = $(myevent).find('.event-location').text();
+    var begin = new Date($(myevent).find(".event-date").text().split(' ').join('T'));
+    var end = new Date($(myevent).find(".event-date").text().split(' ').join('T'));
+    end = end.setHours(end.getHours()+ 2);
+    end = new Date(end);
+    cal.addEvent(subject, desc, loc, begin, end);
+    //download calendar
+    cal.download("Rush Event");
 });

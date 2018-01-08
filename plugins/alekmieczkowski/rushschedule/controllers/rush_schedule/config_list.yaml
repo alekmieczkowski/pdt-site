@@ -10,3 +10,7 @@ toolbar:
     search:
         prompt: 'backend::lang.list.search_prompt'
 recordUrl: 'alekmieczkowski/rushschedule/rush_schedule/update/:id'
+# Default sorting column
+defaultSort:
+    column: name
+    direction: asc
