@@ -4,42 +4,23 @@
             <div class="col-md-6">
                 <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
             </div>
-            <div class="col-sm-6 col-md-4">
-                <table class="table">
-                    <tbody>
-                        <tr class="rush-row">
-                            <td>Event Name</td>
-                            <td>01/04/2012</td>
-                            <td>Cal</td>
-                        </tr>
-                        <tr class="rush-row">
-                            <td>Super Extra Long Event Name For Testing Stuff</td>
-                            <td>01/04/2012</td>
-                            <td>Cal</td>
-                        </tr>
-                        <tr class="rush-row">
-                            <td>Event Name</td>
-                            <td>01/04/2012</td>
-                            <td>Cal</td>
-                        </tr>
-                        <tr class="rush-row">
-                            <td>Super Extra Long Event Name For Testing Stuff</td>
-                            <td>01/04/2012</td>
-                            <td>Cal</td>
-                        </tr>
-                        <tr class="rush-row">
-                            <td>Event Name</td>
-                            <td>01/04/2012</td>
-                            <td>Cal</td>
-                        </tr>
-                        <tr class="rush-row">
-                            <td>Super Extra Long Event Name For Testing Stuff</td>
-                            <td>01/04/2012</td>
-                            <td>Cal</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div id="rush-item" class="col-sm-6 col-md-4">
+                <div class="event-info-div">
+                    <div class="event-arrow">
+                            <img class="event-arrow-img center-block" src="{{ 'assets/images/home/arrow-white.png' | theme}}" />
+                    </div>
+                    <div class="event-name">Long ass event name information</div>
+                    <div class="event-cal"><img class="event-cal-img center-block" src="{{ 'assets/images/home/cal-white.png' | theme}}" /> </div>
+                </div>
+                <div class="event-details">
+                    <div class="event-date">xx/xx/xxxx 7:00 PM</div>
+                    <div class="event-desc">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <div class="event-location"><b>Location: </b> aldskf adslkfj dalfk adslk ajkl dsl </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+{% put js %}
+<script src="{{'assets/vendor/jquery.rotate.js'| theme}}"></script>
+{% endput %}

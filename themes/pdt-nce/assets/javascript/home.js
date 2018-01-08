@@ -1,3 +1,5 @@
+
+/*Pillars*/
 $( document ).ready(function() {
     $("#friendship").fadeOut(1);
     $("#rectitude").fadeOut(1);
@@ -74,4 +76,45 @@ function toggle_text(pillar_name){
         console.log("post pillar");
         toggle_text('#pillar-rectitude');
       });
+
+/*Rush Schedule*/
+
+$.fn.animateRotate = function(angle, duration, easing, complete) {
+    return this.each(function() {
+      var $elem = $(this);
+  
+      $({deg: 0}).animate({deg: angle}, {
+        duration: duration,
+        easing: easing,
+        step: function(now) {
+          $elem.css({
+             transform: 'rotate(' + now + 'deg)'
+           });
+        },
+        complete: complete || $.noop
+      });
+    });
+  };
+
+$("div#rush-item").click(function() {
+        if($(this).find(".event-details").height() == 0){
+            $(this).find(".event-details").animate({
+                height : $(this).find(".event-details")[0].scrollHeight
+            },400);
+            $(this).find("img.event-arrow-img").rotate({ endDeg:90, duration:0.4, persist:true });
+            
+        }
+        else{
+            $(this).find(".event-details").animate({
+                height : 0
+            },400);
+            $(this).find("img.event-arrow-img").rotate({ endDeg:0, duration:0.4, persist:true });
+        }
+        
     
+    
+    });
+
+    $("div#rush-item .event-cal").click(function(e) {
+        e.stopPropagation();
+   });
