@@ -1,0 +1,12 @@
+list: $/alekmieczkowski/chapterstatistics/models/statistics/columns.yaml
+modelClass: AlekMieczkowski\ChapterStatistics\Models\Statistics
+title: Chapter_statistics
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'alekmieczkowski/chapterstatistics/chapter_statistics/update/:id'

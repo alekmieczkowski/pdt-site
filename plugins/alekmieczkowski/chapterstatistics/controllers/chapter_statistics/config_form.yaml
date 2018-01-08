@@ -1,0 +1,10 @@
+name: Chapter_statistics
+form: $/alekmieczkowski/chapterstatistics/models/statistics/fields.yaml
+modelClass: AlekMieczkowski\ChapterStatistics\Models\Statistics
+defaultRedirect: alekmieczkowski/chapterstatistics/chapter_statistics
+create:
+    redirect: 'alekmieczkowski/chapterstatistics/chapter_statistics/update/:id'
+    redirectClose: alekmieczkowski/chapterstatistics/chapter_statistics
+update:
+    redirect: alekmieczkowski/chapterstatistics/chapter_statistics
+    redirectClose: alekmieczkowski/chapterstatistics/chapter_statistics

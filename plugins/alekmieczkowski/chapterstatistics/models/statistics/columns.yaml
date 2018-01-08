@@ -1,0 +1,19 @@
+columns:
+    brothers:
+        label: brothers
+        type: text
+    als:
+        label: als
+        type: number
+    countries:
+        label: countries
+        type: text
+    true_blue:
+        label: true_blue
+        type: text
+    awards:
+        label: awards
+        type: number
+    pallas:
+        label: pallas
+        type: text

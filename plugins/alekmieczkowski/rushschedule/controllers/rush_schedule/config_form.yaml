@@ -1,0 +1,10 @@
+name: Rush_schedule
+form: $/alekmieczkowski/rushschedule/models/rush/fields.yaml
+modelClass: AlekMieczkowski\RushSchedule\Models\Rush
+defaultRedirect: alekmieczkowski/rushschedule/rush_schedule
+create:
+    redirect: 'alekmieczkowski/rushschedule/rush_schedule/update/:id'
+    redirectClose: alekmieczkowski/rushschedule/rush_schedule
+update:
+    redirect: alekmieczkowski/rushschedule/rush_schedule
+    redirectClose: alekmieczkowski/rushschedule/rush_schedule
