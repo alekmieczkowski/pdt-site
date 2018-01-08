@@ -79,25 +79,9 @@ function toggle_text(pillar_name){
 
 /*Rush Schedule*/
 
-$.fn.animateRotate = function(angle, duration, easing, complete) {
-    return this.each(function() {
-      var $elem = $(this);
-  
-      $({deg: 0}).animate({deg: angle}, {
-        duration: duration,
-        easing: easing,
-        step: function(now) {
-          $elem.css({
-             transform: 'rotate(' + now + 'deg)'
-           });
-        },
-        complete: complete || $.noop
-      });
-    });
-  };
-
 $("div#rush-item").click(function() {
-        if($(this).find(".event-details").height() == 0){
+        
+    if($(this).find(".event-details").height() == 0){
             $(this).find(".event-details").animate({
                 height : $(this).find(".event-details")[0].scrollHeight
             },400);
