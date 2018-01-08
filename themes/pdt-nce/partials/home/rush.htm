@@ -1,25 +1,35 @@
 <section class="piece blue events" style="background-image: url({{ 'assets/images/bg/bg-blue.png' | theme}});">
     <div class="container-fluid">
-        <div class="row">
-
+        <div class="row rush-row">
+            <!--Header Text-->
+            <div class="col-md-12 text-center rush-header">
+                <h1>Rush Schedule</h1>
+                <h3 class="rush-year">Spring 2017</h3>
+            </div>
+            <!--Rush Graphic-->
             <div class="col-md-6">
-                <img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" />
+                <img  class="rush-graphic center-block" alt="Rush Graphic" src="{{'assets/images/home/rush-graphic.png' | theme}}" />
             </div>
 
-            <div id="rush-item" class="col-sm-6 col-md-4">
-                <div class="event-info-div">
-                    <div class="event-arrow">
-                            <img class="event-arrow-img center-block" src="{{ 'assets/images/home/arrow-white.png' | theme}}" />
+            <!--Rush Events-->
+            <div  class="col-sm-6 col-md-4">
+                <div id="rush-item">
+                    <div class="event-info-div">
+                        <div class="event-arrow">
+                                <img class="event-arrow-img center-block" src="{{ 'assets/images/home/arrow-white.png' | theme}}" />
+                        </div>
+                        <div class="event-name">Long ass event name information</div>
+                        <div class="event-cal"><img class="event-cal-img center-block" src="{{ 'assets/images/home/cal-white.png' | theme}}" /> </div>
                     </div>
-                    <div class="event-name">Long ass event name information</div>
-                    <div class="event-cal"><img class="event-cal-img center-block" src="{{ 'assets/images/home/cal-white.png' | theme}}" /> </div>
-                </div>
-                <div class="event-details">
-                    <div class="event-date">xx/xx/xxxx 7:00 PM</div>
-                    <div class="event-desc">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                    <div class="event-location"><b>Location: </b> aldskf adslkfj dalfk adslk ajkl dsl </div>
+                    <div class="event-details">
+                        <div class="event-date">xx/xx/xxxx 7:00 PM</div>
+                        <div class="event-desc">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                        <div class="event-location"><b>Location: </b> aldskf adslkfj dalfk adslk ajkl dsl </div>
+                    </div>
                 </div>
             </div>
+            
+
             
         </div>
     </div>

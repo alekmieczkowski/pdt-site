@@ -8,4 +8,4 @@ navigation:
     timeline:
         label: Timeline
         url: alekmieczkowski/timeline/timeline
-        icon: icon-life-ring
+        icon: icon-clock-o
