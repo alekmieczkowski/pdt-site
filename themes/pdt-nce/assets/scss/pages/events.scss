@@ -5,7 +5,7 @@ $triary: #007FFF;
 
 /*page width*/
 .events-width{
-    width:90vw;
+    width:95vw;
 }
 
 /*header*/
@@ -34,7 +34,7 @@ $triary: #007FFF;
 
 .event-container{
     height:340px;
-    background-color:blue;
+    background-color:$primary;
     min-width:400px;
     position:relative;
     border-radius:25px;
@@ -53,9 +53,9 @@ $triary: #007FFF;
 }
 
 .post-title{
-    margin-top:4px;
+    margin-top:10px;
 }
 
 .post-date{
-
+    margin-top:-2px;
 }

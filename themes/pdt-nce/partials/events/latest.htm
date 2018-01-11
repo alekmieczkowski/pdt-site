@@ -4,7 +4,7 @@ postsPerPage = 10
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
-postPage = "blog/post"
+postPage = "event"
 ==
 <section class=" piece white latest-events" style="background-image: url({{ 'assets/images/bg/bg-white.png' | theme}});"> 
     
@@ -18,12 +18,12 @@ postPage = "blog/post"
         <div class="row row-latest-post">
             {% for post in posts %}
             <div class="col-md-6 col-sm-12">
-                <a href="{{post.url}}">
-                    <div class="event-container" style="background-image: url({{ 'assets/images/bg/bg-blue.png' | theme}});">
+                <a href="{{post.url}}"> 
+                    <div class="event-container" style="background-image: url({{ post.featured_images[0].path }});">
                         <!--Description-->
                         <div class="event-desc text-center">
                             <h1 class="post-title">{{post.title}}</h1>
-                            <h2 class="post-date">{{post.created_at}}</h2>
+                            <h2 class="post-date">{{post.published_at |date('M d, Y') }}</h2>
                         </div>
                     </div>
                 </a>
