@@ -1,0 +1,61 @@
+//site colors
+$primary: #003054;
+$secondary: white;
+$triary: #007FFF;
+
+/*page width*/
+.events-width{
+    width:90vw;
+}
+
+/*header*/
+
+.header{
+    height: 50vh;
+}
+
+.header-img{
+    margin-top: 22vh;
+}
+
+/*Latest posts*/
+.latest-events{
+    min-height:400px;
+}
+
+.row-latest-header{
+    margin-top:80px;
+
+}
+
+.row-latest-post{
+    margin-top:40px;
+}
+
+.event-container{
+    height:340px;
+    background-color:blue;
+    min-width:400px;
+    position:relative;
+    border-radius:25px;
+}
+
+
+.event-desc{
+    margin-top:120px;
+    position:absolute;
+    width:100%;
+    height:100px;
+    //width:70%;
+    background-color:rgba(255,255,255,.5);
+    color: $secondary;
+
+}
+
+.post-title{
+    margin-top:4px;
+}
+
+.post-date{
+
+}
