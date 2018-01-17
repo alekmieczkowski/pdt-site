@@ -100,6 +100,10 @@ $triary: #007FFF;
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
+    animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -o-animation-duration: .5s;
+    -webkit-animation-duration: .5s;
 }
 
 .li-center{

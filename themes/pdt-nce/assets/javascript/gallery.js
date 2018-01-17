@@ -61,23 +61,25 @@
            
 
             var img ={$thumbnails: $("ul.thumbnails-carousel")};
-            console.log(img.$thumbnails.height());
             if(img.$thumbnails.height() == 95){
-                console.log("height is 100");
-                img.$thumbnails.animate({
+                img.$thumbnails.velocity({
                     height : img.$thumbnails[0].scrollHeight
                 },400);
 
-                $(".img-more").animate({opacity: 0},150);
+                $(".img-more").velocity({opacity: 0},150);
+                $("#more").find(".img-next").velocity({rotateX:"180deg"},200);
                 
             }
             else{
-                console.log("height is not 100");
-                img.$thumbnails.animate({
+
+                img.$thumbnails.velocity({
                     height : 100
                 },400);
-                $(".img-more").animate({opacity: 1},150);
+                $(".img-more").velocity({opacity: 1},150);
+                $("#more").find(".img-next").velocity("reverse",200);
+                
             }
-            $("#more").find(".img-next").toggleClass("rotate").animate(200);
+           
+            
         
         });
