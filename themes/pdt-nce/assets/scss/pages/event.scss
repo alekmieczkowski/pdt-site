@@ -51,13 +51,15 @@ $triary: #007FFF;
       //float: left;
       display:inline-block;
       cursor: pointer;
+      margin-bottom:5px;
 
   }
   .controls-background-reset {
       background: none !important;
   }
   .active-thumbnail {
-      opacity: 0.4;
+      //opacity: 0.4;
+      border:2px solid white;
   }
   .indicators-fix {
       bottom: 70px;
@@ -85,7 +87,9 @@ $triary: #007FFF;
       color: $secondary;
       font-size:14px;
       margin-bottom:-6px;
+      opacity:1;
   }
+
 
   #more{
       margin-bottom:10px;

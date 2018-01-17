@@ -67,6 +67,8 @@
                 img.$thumbnails.animate({
                     height : img.$thumbnails[0].scrollHeight
                 },400);
+
+                $(".img-more").animate({opacity: 0},150);
                 
             }
             else{
@@ -74,6 +76,7 @@
                 img.$thumbnails.animate({
                     height : 100
                 },400);
+                $(".img-more").animate({opacity: 1},150);
             }
             $("#more").find(".img-next").toggleClass("rotate").animate(200);
         
