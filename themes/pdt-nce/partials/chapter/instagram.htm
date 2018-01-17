@@ -16,8 +16,8 @@ cache = 12
             <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="instagram-container center-block">
                     <!--Display Image or Video-->
-                    <!-- {% if m.getType() == 'image' %}--><img class="instagram-image" src="{{ m.getLowResImage().url }}">
-                    <!-- {% elseif m.getType() == 'video' %}--><video width="262" height="262" controls><source src="{{ m.getLowResVideo().url }}" type="video/mp4"/></video>
+                    <!-- {% if m.getType() != 'video' %}--><img class="instagram-image" src="{{ m.getLowResImage().url }}"> 
+                    <!-- {% else%}--><video width="262" height="262" controls><source src="{{ m.getLowResVideo().url }}" type="video/mp4"/></video>
                    <!--  {% endif %}
 
                     <!--Footer-->
