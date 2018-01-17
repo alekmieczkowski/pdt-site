@@ -55,3 +55,26 @@
     })(window, jQuery);
     
     $('.thumbnails-carousel').thumbnailsCarousel();
+
+    //more images click
+    $("#more").click(function() {
+           
+
+            var img ={$thumbnails: $("ul.thumbnails-carousel")};
+            console.log(img.$thumbnails.height());
+            if(img.$thumbnails.height() == 95){
+                console.log("height is 100");
+                img.$thumbnails.animate({
+                    height : img.$thumbnails[0].scrollHeight
+                },400);
+                
+            }
+            else{
+                console.log("height is not 100");
+                img.$thumbnails.animate({
+                    height : 100
+                },400);
+            }
+            $("#more").find(".img-next").toggleClass("rotate").animate(200);
+        
+        });

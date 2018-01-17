@@ -3,30 +3,45 @@
     <!--Sets Width of page. This creates the frame in which the content exists-->
     <div class="container chapter-width">
     {% if post.gallery.count != 0 %} /* Check if a gallery is attached to your blog post*/
-    <!-- bootstrap carousel -->
-    
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">  
+        
+        <!-- bootstrap carousel -->
+	    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">  
 
             <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                {% for gallery in post.gallery %}
-                {% for image in gallery.images %}
-                <div class="item {% if loop.first %}active srle{% endif %}">
-                    <img src="{{image.path | resize(1200,600)}}" class="img-main img-responsive center-block">
+            <div class="carousel-inner center-block">
+                <!--Main Image-->
+                <div class="item active srle">
+                    <img src="{{ post.featured_images[0].path | resize(1200,600)}}" class="img-main img-responsive center-block">
                 </div>
-                {% endfor %}
+
+                <!--Gallery Images-->
+                {% for gallery in post.gallery %}
+                    {% for image in gallery.images %}
+                        <div class="item">
+                            <img src="{{image.path | resize(1200,600)}}" class="img-main img-responsive center-block">
+                        </div>
+                    {% endfor %}
                 {% endfor %}
             </div>
 
             <!-- Thumbnails --> 
             <ul class="thumbnails-carousel clearfix">
+                <!--Main Image thumbnail-->
+                <li class="li-center"><img class="thumbnail-img img-responsive" src="{{ post.featured_images[0].path | resize(100)}}" ></li>
+
+                <!--Gallery Image thumbnails-->
                 {% for gallery in post.gallery %}
-                {% for image in gallery.images %}
-                <li><img class="thumbnail-img img-responsive" src="{{image.path | resize(100)}}" ></li>
-                {% endfor %}
+                    {% for image in gallery.images %}
+                        <li class="li-center"><img class="thumbnail-img img-responsive" src="{{image.path | resize(100)}}" ></li>
+                    {% endfor %}
                 {% endfor %}
             </ul>
-          </div>
+            <div id="more" class="button-next">
+                <h3 class="img-more text-center">More Images</h3>
+                <img class="img-next center-block" src="{{ 'assets/images/event/next.png' | theme}}"/>
+            </div>
+        </div>
+
           {% endif %}
 
 </section>

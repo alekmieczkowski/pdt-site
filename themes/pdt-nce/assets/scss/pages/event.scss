@@ -37,14 +37,19 @@ $triary: #007FFF;
       margin: 0;
       list-style-type: none;
       text-align: center;
+      height:100px;
+      overflow:hidden;
+      //padding-left:30px;
 
   }
   ul.thumbnails-carousel .center {
       display: inline-block;
+
   }
   ul.thumbnails-carousel li {
       margin-right: 5px;
-      float: left;
+      //float: left;
+      display:inline-block;
       cursor: pointer;
 
   }
@@ -59,8 +64,9 @@ $triary: #007FFF;
   }
 
   .thumbnail-img{
-    height: 100px;
+    height: 90px;
     padding: 5px;
+    margin:auto;
   }
 
   .item .active{
@@ -74,3 +80,24 @@ $triary: #007FFF;
     margin-bottom:10px;
     margin-top:100px;
   }
+
+  .img-more{
+      color: $secondary;
+      font-size:14px;
+      margin-bottom:-6px;
+  }
+
+  #more{
+      margin-bottom:10px;
+  }
+
+  .rotate {
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+}
+
+.li-center{
+    margin:auto;
+}
