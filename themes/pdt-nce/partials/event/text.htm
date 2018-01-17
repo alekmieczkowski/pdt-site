@@ -1,0 +1,17 @@
+
+
+<section class="chapter white post-text" style="background-image: url({{ 'assets/images/bg/bg-white.png' | theme}});"> 
+    
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container chapter-width">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>{{post.title}}</h1>
+                <h3 class="post-date">{{post.published_at  |date('M d, Y') }}</h3>
+            </div>
+            <br>
+            <div class="col-xs-12 post-description">{{post.content |raw}}</div>
+        </div>
+            
+    </div>
+</section>

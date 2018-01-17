@@ -1,0 +1,76 @@
+//site colors
+$primary: #003054;
+$secondary: white;
+$triary: #007FFF;
+
+/*Text description*/
+.post-text{
+    min-height:400px;
+    color: $primary;
+}
+.post-date{
+    margin-top:-6px;
+}
+
+.post-description{
+    font-size:20px;
+
+}
+
+.break{
+    height:4px;
+    background-color: $primary;
+}
+
+/*gallery*/
+#carousel-example-generic {
+
+  }
+  /*****************************/
+  
+  .img-main{
+      max-height:600px;
+  }
+  /* Plugin styles */
+  ul.thumbnails-carousel {
+      padding: 5px 0 0 0;
+      margin: 0;
+      list-style-type: none;
+      text-align: center;
+
+  }
+  ul.thumbnails-carousel .center {
+      display: inline-block;
+  }
+  ul.thumbnails-carousel li {
+      margin-right: 5px;
+      float: left;
+      cursor: pointer;
+
+  }
+  .controls-background-reset {
+      background: none !important;
+  }
+  .active-thumbnail {
+      opacity: 0.4;
+  }
+  .indicators-fix {
+      bottom: 70px;
+  }
+
+  .thumbnail-img{
+    height: 100px;
+    padding: 5px;
+  }
+
+  .item .active{
+      max-height:600px;
+      max-width:1200px;
+  }
+
+  .carousel-inner{
+    max-height: 600px;
+    max-width: 80vw;
+    margin-bottom:10px;
+    margin-top:100px;
+  }

@@ -1,0 +1,38 @@
+<section class="chapter blue post-text" style="background-image: url({{ 'assets/images/bg/bg-blue.png' | theme}});"> 
+    
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container chapter-width">
+    {% if post.gallery.count != 0 %} /* Check if a gallery is attached to your blog post*/
+    <!-- bootstrap carousel -->
+    
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">  
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                {% for gallery in post.gallery %}
+                {% for image in gallery.images %}
+                <div class="item {% if loop.first %}active srle{% endif %}">
+                    <img src="{{image.path | resize(1200,600)}}" class="img-main img-responsive center-block">
+                </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+
+            <!-- Thumbnails --> 
+            <ul class="thumbnails-carousel clearfix">
+                {% for gallery in post.gallery %}
+                {% for image in gallery.images %}
+                <li><img class="thumbnail-img img-responsive" src="{{image.path | resize(100)}}" ></li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+</section>
+
+
+
+{% put js %}
+<script src="{{'assets/javascript/gallery.js'| theme}}"></script>
+{% endput %}

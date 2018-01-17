@@ -7,4 +7,18 @@ is_hidden = 0
 slug = "{{ :slug }}"
 categoryPage = "events_home"
 ==
-{% component 'blogPost' %}
+
+
+{% put styles %}
+<link type="text/css" href="{{ ['assets/scss/pages/event.scss'] | theme }}" rel="stylesheet"/>
+{% endput %}
+
+<!--Event Gallery-->
+{% partial 'event/gallery' %}
+
+<!--Event Text-->
+{% partial 'event/text' %}
+
+{% put js %}
+
+{% endput %}
