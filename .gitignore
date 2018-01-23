@@ -18,5 +18,5 @@ index.php
 
 #dont ignore theme
 !themes/pdt-nce
-!themes/pdt-nce/*
 !themes/pdt-nce/vendor
+!themes/pdt-nce/vendor/*
