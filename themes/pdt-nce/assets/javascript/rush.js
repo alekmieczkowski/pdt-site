@@ -3,22 +3,22 @@
 /*Open Divider*/
 function openRush(div){
     //opening div
-    $(div).find(".event-details").animate({
+    $(div).find(".event-details").velocity({
        height : $(div).find(".event-details")[0].scrollHeight
    },800);
 
    //event date
-   $(div).find(".event-date").delay(400).animate({
+   $(div).find(".event-date").delay(400).velocity({
            opacity: 1
        },200);
 
    //event description
-   $(div).find(".event-desc").delay(600).animate({
+   $(div).find(".event-desc").delay(600).velocity({
        opacity: 1
    },200);
 
    //event location
-   $(div).find(".event-location").delay(700).animate({
+   $(div).find(".event-location").delay(700).velocity({
        opacity: 1
    },200);
 
@@ -33,14 +33,14 @@ function closeRush(div, closeAll){
 
        $("img.event-arrow-img").rotate({ endDeg:0, duration:0.4, persist:true });
 
-       $(div).delay(200).animate({
+       $(div).delay(200).velocity({
            height : 0
        },800);
    }
    else{
        $(div).find("img.event-arrow-img").rotate({ endDeg:0, duration:0.4, persist:true });
 
-       $(div).find(".event-details").delay(200).animate({
+       $(div).find(".event-details").delay(200).velocity({
            height : 0
        },800);
 
@@ -48,16 +48,16 @@ function closeRush(div, closeAll){
    }
 
    //event location
-   $(div).find(".event-location").animate({
+   $(div).find(".event-location").velocity({
        opacity: 0
    },200);
    //event description
-   $(div).find(".event-desc").delay(100).animate({
+   $(div).find(".event-desc").delay(100).velocity({
        opacity: 0
    },200);
 
    //event date
-   $(div).find(".event-date").delay(400).animate({
+   $(div).find(".event-date").delay(400).velocity({
        opacity: 0
    },200);
 

@@ -1,0 +1,5 @@
+columns:
+    image:
+        label: Thumbnail
+        sortable: false
+        template: <img src="{{ model_data.schedule.getPath() }}" />
