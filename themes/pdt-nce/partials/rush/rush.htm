@@ -16,12 +16,12 @@ detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 ==
-use alekmieczkowski\rushschedule\Models\rush_graphic;
+use alekmieczkowski\rushschedule\Models\Rush_graphic;
 
 
 function onStart()
 {
-    $this['model_data'] = rush_graphic::first();
+    $this['model_data'] = Rush_graphic::first();
 }
 ==
 {% set records = rush.records%}
