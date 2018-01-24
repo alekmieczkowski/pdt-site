@@ -26,8 +26,9 @@ class Rush extends Model
      */
     public $table = 'alekmieczkowski_rushschedule_';
 
-    //attach image
-    public $attachOne = [
+     //attach image
+     public $attachOne = [
         'schedule' => 'System\Models\File'
     ];
+    
 }
