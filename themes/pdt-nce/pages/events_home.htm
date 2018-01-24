@@ -1,0 +1,21 @@
+title = "Events Home"
+layout="default"
+url = "/events-home"
+is_hidden = 0
+==
+
+{% put styles %}
+<link type="text/css" href="{{ ['assets/scss/pages/events.scss'] | theme }}" rel="stylesheet"/>
+{% endput %}
+
+<!--Header-->
+{% partial 'events/header' %}
+<!--Upcoming Events-->
+
+<!--Latest Events-->
+{% partial 'events/latest' %}
+
+
+{% put js %}
+<script src="{{'assets/javascript/home.js'| theme}}"></script>
+{% endput %}

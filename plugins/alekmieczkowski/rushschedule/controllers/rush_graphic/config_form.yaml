@@ -1,0 +1,10 @@
+name: Rush_graphic
+modelClass: AlekMieczkowski\RushSchedule\Models\Rush_graphic
+form: $/alekmieczkowski/rushschedule/models/rush_graphic/fields.yaml
+defaultRedirect: alekmieczkowski/rushschedule/rush_graphic
+create:
+    redirect: 'alekmieczkowski/rushschedule/rush_graphic/update/:id'
+    redirectClose: alekmieczkowski/rushschedule/rush_graphic
+update:
+    redirect: alekmieczkowski/rushschedule/rush_graphic
+    redirectClose: alekmieczkowski/rushschedule/rush_graphic

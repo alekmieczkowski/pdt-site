@@ -1,0 +1,49 @@
+title = "Rush"
+url = "/rush"
+layout = "default"
+is_hidden = 0
+
+[genericForm contactForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New Rush Inquiry from phideltuncc.org"
+mail_recipients[] = "recruitment.pdtuncc@gmail.com"
+mail_replyto = "rush@phideltuncc.org"
+mail_resp_enabled = 0
+mail_resp_field = "recruitment.pdtuncc@gmail.com"
+mail_resp_from = "rush@phideltuncc.org"
+mail_resp_subject = "New Rush Inquiry from phideltuncc.org"
+inline_errors = "disabled"
+sanitize_data = "htmlspecialchars"
+anonymize_ip = "disabled"
+recaptcha_enabled = 1
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+==
+{% put styles %}
+<link type="text/css" href="{{ ['assets/scss/pages/rush.scss'] | theme }}" rel="stylesheet"/>
+{% endput %}
+
+<!--Rush Schedule-->
+{% partial "rush/rush" %}
+<!--Contact-->
+<section class="chapter white post-text" style="background-image: url({{ 'assets/images/bg/bg-white.png' | theme}});"> 
+    
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container chapter-width">
+        <h1 class="contact-text">Want to know more? Contact us below!</h1>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 contact-form">
+                {% component 'contactForm' %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% put js %}
+<script src="{{'assets/javascript/rush.js'| theme}}"></script>
+{% endput %}

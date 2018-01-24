@@ -1,0 +1,24 @@
+title = "Event"
+url = "event/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "events_home"
+==
+
+
+{% put styles %}
+<link type="text/css" href="{{ ['assets/scss/pages/event.scss'] | theme }}" rel="stylesheet"/>
+{% endput %}
+
+<!--Event Gallery-->
+{% partial 'event/gallery' %}
+
+<!--Event Text-->
+{% partial 'event/text' %}
+
+{% put js %}
+
+{% endput %}
