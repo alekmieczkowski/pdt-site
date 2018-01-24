@@ -66,7 +66,7 @@ function onStart()
                         <div class="event-cal"><img class="event-cal-img center-block" src="{{ 'assets/images/home/cal-white.png' | theme}}" /> </div>
                     </div>
                     <div class="event-details">
-                        <div class="event-date">{{record.date | date('M d, Y H:i A')}}</div>
+                        <div class="event-date">{{record.date | date('M d, Y g:i A')}}</div>
                         <div class="event-desc">{{record.description}}</div>
                         <div class="event-location"><b>Location: </b>{{record.location}}</div>
                     </div>
