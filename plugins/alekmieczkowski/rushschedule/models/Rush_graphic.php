@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Rush extends Model
+class Rush_graphic extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -26,9 +26,8 @@ class Rush extends Model
      */
     public $table = 'alekmieczkowski_rushschedule_';
 
-     //attach image
-     public $attachOne = [
-        'schedule' => 'System\Models\File'
-    ];
-    
+        //attach image
+        public $attachOne = [
+            'schedule' => 'System\Models\File'
+        ];
 }

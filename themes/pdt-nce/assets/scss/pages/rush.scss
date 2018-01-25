@@ -9,24 +9,58 @@ $triary: #007FFF;
 
 .events{
 	min-height:500px;
+
 }
 
 
 .rush-row{
 	margin-top:40px;
-	margin-bottom:40px;
+	margin-bottom:100px;
 }
 
 .rush-header{
 	margin-bottom:60px;
+	margin-top:80px;
 }
 .rush-year{
 	margin-top:-8px;
 }
-.rush-graphic{
-	height:600px;
-	border: 4px solid $secondary;
+
+/*Image*/
+.img-container img{
+	max-width:100%;
+	
 }
+.img-container{
+	position:relative;
+	max-height:600px;
+	max-width:600px;
+	border: 4px solid $secondary;
+	
+
+}
+
+.download-icon-div{
+	position:absolute;
+	top:0;
+	left:0;
+	height:50px;
+	width:50px;
+	background-color:$secondary;
+	border:2px solid $secondary;
+	border-radius:0px 0px 4px 0px;
+
+}
+
+.download-icon{
+	height: 30px;
+    width: 30px;
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 4px;
+}
+
+
 #rush-item{
 	margin-bottom:6px;
 }
@@ -161,4 +195,10 @@ label{
 .form-group > textarea{
     background-color: $primary;
     color: $secondary;
+}
+
+#contactForm_forms_flash .alert{
+	color: $primary;
+	background-color: rgba(255,255,255,.4)!important;
+	border: 2px solid $primary;
 }

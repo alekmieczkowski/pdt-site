@@ -2,14 +2,20 @@
 bootstrap/
 config/
 modules/
-plugins/
+plugins/*
 storage/
 vendor/
+themes/*
 artisan
 index.php
 .git
 .htaccess
 .vscode
 
+
+#dont ignore plugins
 !plugins/alekmieczkowski
-!plugins/alekmieczkowski/pusherapi
+
+#dont ignore theme
+!themes/pdt-nce
+!themes/pdt-nce/assets/vendor

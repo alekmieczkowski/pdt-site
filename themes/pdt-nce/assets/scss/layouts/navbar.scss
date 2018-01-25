@@ -79,7 +79,8 @@ color: $secondary;
 
 	/*This sets background for BOTH navigation bar AND dropdown menu in mobile form*/
 	.navbar-default .navbar-collapse,.navbar-default .navbar-form {
-	 	background:$primary;
+		 background:$primary;
+		 border: 0px;
 		}
 }
 

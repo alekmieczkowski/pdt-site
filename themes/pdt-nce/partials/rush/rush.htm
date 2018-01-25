@@ -16,7 +16,7 @@ detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 ==
-use alekmieczkowski\rushschedule\Models\rush_graphic;
+use alekmieczkowski\rushschedule\Models\Rush_graphic;
 
 
 function onStart()
@@ -33,14 +33,23 @@ function onStart()
             <!--Header Text-->
             <div class="col-md-12 text-center rush-header">
                 <h1>Rush Schedule</h1>
-                <h3 class="rush-year">Spring 2017</h3>
+                <h3 class="rush-year">Spring 2018</h3>
             </div>
             <!--Rush Graphic-->
-            <div class="col-md-6 ">
+            <div class="col-md-6 hidden-xs hidden-sm">
                 {% for graphic_link in graphics %}
-                {%if loop.first%}
-                <img  class="rush-graphic center-block hidden-xs hidden-sm" alt="Rush Graphic" src="{{ model_data.schedule.getPath() }}" />
-                {%endif%}
+                    {%if loop.first%}
+                        <div class="img-container center-block">
+                            {% set rush_graphic = model_data.schedule.getPath() %}
+                            <div class="download-icon-div">
+                                <a download="pdt-rush-graphic.png" href="{{rush_graphic}}" title="PDT NC Epsilon Rush Graphic">
+                                    <img class="download-icon" src="{{'assets/images/rush/download.png' | theme}}" alt=""/>
+                                </a>
+                            </div>
+                                
+                            <img  class="rush-graphic center-block " alt="Rush Graphic" src="{{rush_graphic}}" />
+                        </div>
+                    {%endif%}
                 {%endfor%}
             </div>
 
@@ -57,7 +66,8 @@ function onStart()
                         <div class="event-cal"><img class="event-cal-img center-block" src="{{ 'assets/images/home/cal-white.png' | theme}}" /> </div>
                     </div>
                     <div class="event-details">
-                        <div class="event-date">{{record.date}}</div>
+                        <div class="event-date">{{record.date | date('M d, Y g:i A')}}</div>
+                        <div id="event-date-tag" style="position:absolute; opacity:0;">{{record.date}}</div>
                         <div class="event-desc">{{record.description}}</div>
                         <div class="event-location"><b>Location: </b>{{record.location}}</div>
                     </div>

@@ -1,0 +1,12 @@
+title: Rush_graphic
+modelClass: AlekMieczkowski\RushSchedule\Models\Rush_graphic
+list: $/alekmieczkowski/rushschedule/models/rush_graphic/columns.yaml
+recordUrl: 'alekmieczkowski/rushschedule/rush_graphic/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
