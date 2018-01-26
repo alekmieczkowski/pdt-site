@@ -11,45 +11,19 @@
             <img class="future-btn img-responsive center-block" src="{{ 'assets/images/home/cal-blue.png' | theme}}" />
         </div>
 
-        <!--Just for testing-->
-        <div id="future-item" class="text-center">
-            <h2><b> Event Name long one yada 2</b></h2>
-            <h3>event date</h3>
-            <!--<h5 class="future-desc">Event Description random text here. yada yada aksdkjf lask lk l lkdjlasjl kdjl kjlakj lksjdlk ajl lkdj lkjd alk jlljk</h5>-->
-            <img class="future-btn img-responsive center-block" src="{{ 'assets/images/home/cal-blue.png' | theme}}" />
-        </div>
-        <div id="future-item" class="text-center">
-                <h2><b> Event Name long one yada 3</b></h2>
-                <h3>event date</h3>
-                <!--<h5 class="future-desc">Event Description random text here. yada yada aksdkjf lask lk l lkdjlasjl kdjl kjlakj lksjdlk ajl lkdj lkjd alk jlljk</h5>-->
-                <img class="future-btn img-responsive center-block" src="{{ 'assets/images/home/cal-blue.png' | theme}}" />
-            </div>
-
-            <div id="future-item" class="text-center">
-                    <h2><b> Event Name long one yada 4</b></h2>
-                    <h3>event date</h3>
-                    <!--<h5 class="future-desc">Event Description random text here. yada yada aksdkjf lask lk l lkdjlasjl kdjl kjlakj lksjdlk ajl lkdj lkjd alk jlljk</h5>-->
-                    <img class="future-btn img-responsive center-block" src="{{ 'assets/images/home/cal-blue.png' | theme}}" />
-                </div>
-
-                <div id="future-item" class="text-center">
-                        <h2><b> Event Name long one yada 5</b></h2>
-                        <h3>event date</h3>
-                        <!--<h5 class="future-desc">Event Description random text here. yada yada aksdkjf lask lk l lkdjlasjl kdjl kjlakj lksjdlk ajl lkdj lkjd alk jlljk</h5>-->
-                        <img class="future-btn img-responsive center-block" src="{{ 'assets/images/home/cal-blue.png' | theme}}" />
-                    </div>
-                    <div id="future-item" class="text-center">
-                            <h2><b> Event Name long one yada 6</b></h2>
-                            <h3>event date</h3>
-                            <!--<h5 class="future-desc">Event Description random text here. yada yada aksdkjf lask lk l lkdjlasjl kdjl kjlakj lksjdlk ajl lkdj lkjd alk jlljk</h5>-->
-                            <img class="future-btn img-responsive center-block" src="{{ 'assets/images/home/cal-blue.png' | theme}}" />
-                        </div>
-                    <!-- end for testing-->
+       
 
                 
     </div>
 </section>
+<script>
+    //send icon img data to js
+    var img ="{{ 'assets/images/home/cal-blue.png' | theme}}";
+</script>
 {% put js %}
 <script src="{{'assets/vendor/endless.min.js'| theme}}"></script>
-<script src="{{'assets/javascript/events.js'| theme}}"></script>
+<script src="{{'assets/vendor/google-calendar-events.min.js'| theme}}"></script>
+<script src="{{'assets/javascript/events.js'| theme}}">
+</script>
+
 {% endput %}
