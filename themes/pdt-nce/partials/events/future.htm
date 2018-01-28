@@ -1,20 +1,6 @@
 <section class=" piece white future-events" style="background-image: url({{ 'assets/images/bg/bg-white.png' | theme}});"> 
     <!--Sets Width of page. This creates the frame in which the content exists-->
-    <div class="future-events-wrapper">
-        
-
-        
-        <div id="future-item" class="text-center">
-            <h2><b> Event Name long one yada 1</b></h2>
-            <h3>event date</h3>
-            <!--<h5 class="future-desc">Event Description random text here. yada yada aksdkjf lask lk l lkdjlasjl kdjl kjlakj lksjdlk ajl lkdj lkjd alk jlljk</h5>-->
-            <img class="future-btn img-responsive center-block" src="{{ 'assets/images/home/cal-blue.png' | theme}}" />
-        </div>
-
-       
-
-                
-    </div>
+    <div class="future-events-wrapper"></div>
 </section>
 <script>
     //send icon img data to js
@@ -23,7 +9,6 @@
 {% put js %}
 <script src="{{'assets/vendor/endless.min.js'| theme}}"></script>
 <script src="{{'assets/vendor/google-calendar-events.min.js'| theme}}"></script>
-<script src="{{'assets/javascript/events.js'| theme}}">
-</script>
-
+<script src="{{'assets/vendor/jquery.fittext.js'| theme}}"></script>
+<script src="{{'assets/javascript/events.js'| theme}}"></script>
 {% endput %}
