@@ -1,0 +1,12 @@
+list: $/alekmieczkowski/rushschedule/models/rec_speech/columns.yaml
+modelClass: AlekMieczkowski\RushSchedule\Models\Rec_speech
+title: Rush_speech
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'alekmieczkowski/rushschedule/rush_speech/update/:id'

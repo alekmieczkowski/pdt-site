@@ -1,0 +1,4 @@
+title: Rush_speech
+modelClass: AlekMieczkowski\RushSchedule\Models\Rec_speech
+toolbar:
+    buttons: reorder_toolbar

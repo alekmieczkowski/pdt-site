@@ -3,3 +3,9 @@
 1.0.2:
     - 'Created table alekmieczkowski_rushschedule_'
     - builder_table_create_alekmieczkowski_rushschedule_.php
+1.0.3:
+    - 'Created table alekmieczkowski_rushschedule_speech'
+    - builder_table_create_alekmieczkowski_rushschedule_speech.php
+1.0.4:
+    - 'Updated table alekmieczkowski_rushschedule_speech'
+    - builder_table_update_alekmieczkowski_rushschedule_speech.php

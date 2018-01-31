@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: id
+        type: number
+    speech:
+        label: speech
+        type: text
+    chair_name:
+        label: chair_name
+        type: text
+    bond:
+        label: bond
+        type: number

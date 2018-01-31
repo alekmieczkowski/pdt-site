@@ -1,0 +1,10 @@
+name: Rush_speech
+form: $/alekmieczkowski/rushschedule/models/rec_speech/fields.yaml
+modelClass: AlekMieczkowski\RushSchedule\Models\Rec_speech
+defaultRedirect: alekmieczkowski/rushschedule/rush_speech
+create:
+    redirect: 'alekmieczkowski/rushschedule/rush_speech/update/:id'
+    redirectClose: alekmieczkowski/rushschedule/rush_speech
+update:
+    redirect: alekmieczkowski/rushschedule/rush_speech
+    redirectClose: alekmieczkowski/rushschedule/rush_speech

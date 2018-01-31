@@ -1,0 +1,58 @@
+[builderList rec_speech]
+modelClass = "AlekMieczkowski\RushSchedule\Models\Rec_speech"
+scope = "-"
+displayColumn = 1
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = rec_speech.records%}
+<section class="chapter blue recruitment-text" style="background-image: url({{ 'assets/images/bg/bg-blue.png' | theme}});"> 
+    
+    <!--Sets Width of page. This creates the frame in which the content exists-->
+    <div class="container speech-container">
+        <div class="row">
+            <div class="col-sm-4">
+                {% for record in records%}
+                {%if loop.first %}
+                <img class="speech-img img-responsive center-block" src="{{record.mugshot.getPath()}}"/>
+                <h3 class="text-center">{{record.chair_name}}  #{{record.bond}}</h3>
+                <h4 class="text-center">Recruitment Chair</h4>
+                
+            </div>
+            <div class="col-sm-7">
+                <p class="speech-text"> 
+                    {{record.speech}}</br>
+                </p>
+                {%endif%}
+                {%endfor%}
+                <!--<p class="speech-signed">- Harry P. Shaw  #21</p>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.speech-container{
+    padding-top:140px;
+}
+.speech-img{
+    border: 2px solid white;
+    max-width:350px;
+    max-height:350px;
+}
+
+.speech-text{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.speech-signed{
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: right;
+}
+</style>

@@ -18,3 +18,7 @@ navigation:
                 label: 'Rush Graphic'
                 url: alekmieczkowski/rushschedule/rush_graphic
                 icon: icon-image
+            'RC Speech':
+                label: 'Recruitment Speech'
+                url: alekmieczkowski/rushschedule/rush_speech
+                icon: icon-sitemap

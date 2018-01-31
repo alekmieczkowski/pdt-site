@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Rush extends Model
+class Rec_speech extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -24,11 +24,10 @@ class Rush extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'alekmieczkowski_rushschedule_';
+    public $table = 'alekmieczkowski_rushschedule_speech';
 
-     //attach image
-     public $attachOne = [
-        'schedule' => 'System\Models\File'
+    //attach image
+    public $attachOne = [
+        'mugshot' => 'System\Models\File'
     ];
-    
 }
